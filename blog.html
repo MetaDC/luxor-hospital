@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <!-- Mirrored from mellis-html.vercel.app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2024 06:04:52 GMT -->
   <!-- Added by HTTrack -->
@@ -155,7 +155,9 @@
         visibility: visible;
         transform: translateX(-50%) scale(1);
         /* Ensure it scales in place */
-        transition: opacity 300ms ease, transform 300ms ease;
+        transition:
+          opacity 300ms ease,
+          transform 300ms ease;
       }
 
       .dropdown-menus-1 {
@@ -1246,7 +1248,11 @@
               />
             </form>
           </div>
-          <div class="row gutter-y-30" id="blogs-list"></div>
+          <div class="row gutter-y-30" id="blogs-list">
+            <!-- BLOG_LIST_START -->
+            <!-- Dynamic content will be loaded here -->
+            <!-- BLOG_LIST_END -->
+          </div>
         </div>
         <!-- /.row -->
         <!-- </div>/.container -->
@@ -1471,183 +1477,40 @@
 
     <!-- template js -->
     <script src="assets/js/mellis.js"></script>
+    <script src="assets/js/blog-data.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Select all dropdown menus
-        const dropdowns = document.querySelectorAll(".mega-dropdown");
+      function renderBlogs(blogs) {
+        const list = document.getElementById("blogs-list");
+        list.innerHTML = "<!-- BLOG_LIST_START -->"; // Start with markers if needed, or just clear
 
-        dropdowns.forEach((dropdown) => {
-          // Get the trigger and associated menu
-          const trigger = dropdown.querySelector("a");
-          const menu = dropdown.querySelector(
-            ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
-          );
-
-          // Toggle dropdown on click
-          trigger.addEventListener("click", (e) => {
-            e.preventDefault();
-
-            // Close all other dropdowns
-            dropdowns.forEach((otherDropdown) => {
-              const otherMenu = otherDropdown.querySelector(
-                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
-              );
-              if (otherMenu !== menu) {
-                otherMenu.style.display = "none";
-              }
-            });
-
-            // Toggle the current dropdown
-            menu.style.display =
-              menu.style.display === "block" ? "none" : "block";
-          });
-        });
-
-        // Close dropdowns when clicking outside
-        document.addEventListener("click", (e) => {
-          if (!e.target.closest(".mega-dropdown")) {
-            dropdowns.forEach((dropdown) => {
-              const menu = dropdown.querySelector(
-                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
-              );
-              menu.style.display = "none";
-            });
-          }
-        });
-      });
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
-
-    <script></script>
-
-    <script>
-      // Your web app's Firebase configuration
-      // const firebaseConfig = {
-      //     apiKey: "AIzaSyD_L_13116jHU8BarcsLL-u1bj-XJLjqaM",
-      //     authDomain: "kadji-blogs.firebaseapp.com",
-      //     projectId: "kadji-blogs",
-      //     storageBucket: "kadji-blogs.appspot.com",
-      //     messagingSenderId: "163750255841",
-      //     appId: "1:163750255841:web:03a3a0a65d4987e248aba0"
-      // };
-      const firebaseConfig = {
-        apiKey: "AIzaSyDYCdGaVa45nfOwKLUrLv6DHqx-1CKi-Uw",
-        appId: "1:405925023047:web:fb25a11f8df211bf04d062",
-        messagingSenderId: "405925023047",
-        projectId: "luxor-d2976",
-        authDomain: "luxor-d2976.firebaseapp.com",
-        storageBucket: "luxor-d2976.firebasestorage.app",
-      };
-
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-
-      // Initialize Firestore
-      const db = firebase.firestore();
-
-      // Reference to Firestore collection
-      var ref = db.collection("Blogs").where("isVisible", "==", true);
-      var list = document.getElementById("blogs-list");
-      var allBlogs = [];
-
-      // Fetch all blogs on page load
-      ref
-        .orderBy("createdAt", "desc")
-        .get()
-        .then((docsSnap) => {
-          console.log("Documents fetched:", docsSnap.docs.length);
-          if (docsSnap.docs.length > 0) {
-            allBlogs = docsSnap.docs;
-
-            getData(allBlogs); // Render the fetched blogs
-          } else {
-            console.error("No blogs found.");
-            list.innerHTML = "<p>No blogs available.</p>";
-          }
-        })
-        .catch((error) => {
-          console.error("Error fetching documents:", error);
-          list.innerHTML =
-            "<p>Error fetching blogs. Please try again later.</p>";
-        });
-
-      // Function to render blogs
-      function getData(blogs) {
-        list.innerHTML = ""; // Clear the previous blog list
-
-        if (blogs.length > 0) {
-          blogs.forEach((doc) => {
-            const data = doc.data();
-            console.log(`lasld${data}`);
-            const date = new Date(data.createdAt)
-              .toDateString()
-              .split(" ")
-              .slice(1)
-              .join(" ");
-
+        if (blogs.length === 0) {
+          list.innerHTML += "<p>No blogs found matching your search.</p>";
+        } else {
+          blogs.forEach((blog) => {
             list.innerHTML += `
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                      <a href="blog-details.html?title=${data.permalink}" class="blog-card__link">
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                    <a href="blog-details.html?title=${blog.permalink}" class="blog-card__link">
                         <div class="blog-one__single">
                             <div class="blog-one__img aspect-ratio-16-9">
-                                
-                                <img src="${data.thumbnail}" alt="Blog">
+                                <img src="${blog.thumbnail}" alt="Blog">
                             </div>
                             <div class="blog-one__content">
-                                <h3 class="blog-one__title"><a href="blog-details.html?title=${data.permalink}">${data.metaTitle}</a></h3>
-                                <div class= "blog-card-bottom">
+                                <h3 class="blog-one__title"><a href="blog-details.html?title=${blog.permalink}">${blog.metaTitle}</a></h3>
+                                <div class="blog-card-bottom">
                                     <span class="blog-card__link__back"><span class="icon-duble-arrow"></span>Read More</span>
-                                    <span class="blog-block__meta" id="blog-date">${date}</span>
-                                    </div>
-                                    </div>
-                        </a>
+                                    <span class="blog-block__meta">${blog.date}</span>
+                                </div>
+                            </div>
                         </div>
+                    </a>
+                </div>
                 `;
           });
-        } else {
-          list.innerHTML = "<p>No blogs match your search.</p>";
         }
+        list.innerHTML += "<!-- BLOG_LIST_END -->";
       }
 
-      // Event listener for search input field
-      document
-        .getElementById("searchInput")
-        .addEventListener("input", function (event) {
-          var keyword = event.target.value.trim().toLowerCase(); // Get the entered search keyword
-
-          if (keyword) {
-            console.log("Search keyword:", keyword);
-
-            // Filter blogs based on the keyword
-            var filteredBlogs = allBlogs.filter((doc) => {
-              const data = doc.data();
-              const metaTitle = data.metaTitle
-                ? data.metaTitle.toLowerCase()
-                : "";
-              const lowerTitle = data.lowerTitle
-                ? data.lowerTitle.toLowerCase()
-                : "";
-
-              return (
-                metaTitle.includes(keyword) || lowerTitle.includes(keyword)
-              );
-            });
-
-            console.log("Filtered blogs:", filteredBlogs.length);
-            getData(filteredBlogs); // Render the filtered blogs
-          } else {
-            console.log("No keyword entered, displaying all blogs.");
-            getData(allBlogs); // If no keyword, render all blogs
-          }
-        });
-
-      // Show all blogs initially
-      document.addEventListener("DOMContentLoaded", function () {
-        getData(allBlogs);
-      });
+      renderBlogs(allBlogs);
     </script>
   </body>
-
-  <!-- Mirrored from mellis-html.vercel.app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2024 06:05:32 GMT -->
 </html>
