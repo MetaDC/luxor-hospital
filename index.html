@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <!-- Mirrored from mellis-html.vercel.app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2024 06:04:52 GMT -->
   <!-- Added by HTTrack -->
@@ -159,7 +159,9 @@
         visibility: visible;
         transform: translateX(-50%) scale(1);
         /* Ensure it scales in place */
-        transition: opacity 300ms ease, transform 300ms ease;
+        transition:
+          opacity 300ms ease,
+          transform 300ms ease;
       }
 
       .dropdown-menus-1 {
@@ -772,8 +774,10 @@
       }
 
       .award-certi .swiper-slide img {
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5),
-          0px -4px 10px rgba(0, 0, 0, 0.5), 4px 0px 10px rgba(0, 0, 0, 0.5),
+        box-shadow:
+          0px 4px 10px rgba(0, 0, 0, 0.5),
+          0px -4px 10px rgba(0, 0, 0, 0.5),
+          4px 0px 10px rgba(0, 0, 0, 0.5),
           -4px 0px 10px rgba(0, 0, 0, 0.5);
         /* Four sides shadow */
       }
@@ -1562,7 +1566,7 @@
                     <a href="blog.html">Blogs</a>
                   </li>
                   <li>
-                    <a href="#">Academics</a>
+                    <a href="academic.html">Academics</a>
                   </li>
                 </ul>
               </div>
@@ -3933,7 +3937,7 @@
           // Get the trigger and associated menu
           const trigger = dropdown.querySelector("a");
           const menu = dropdown.querySelector(
-            ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
+            ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2",
           );
 
           // Toggle dropdown on click
@@ -3943,7 +3947,7 @@
             // Close all other dropdowns
             dropdowns.forEach((otherDropdown) => {
               const otherMenu = otherDropdown.querySelector(
-                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
+                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2",
               );
               if (otherMenu !== menu) {
                 otherMenu.style.display = "none";
@@ -3961,7 +3965,7 @@
           if (!e.target.closest(".mega-dropdown")) {
             dropdowns.forEach((dropdown) => {
               const menu = dropdown.querySelector(
-                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
+                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2",
               );
               menu.style.display = "none";
             });
@@ -3992,7 +3996,172 @@
       // Reference to Firestore collection
       var ref = db.collection("Blogs").where("isFav", "==", true);
       var list = document.getElementById("blogs-list");
-      const blogMapping = {'Natural Hairline Design How Surgeons Plan Hair Transplants': 'natural-hairline-design-how-surgeons-plan-hair-transplants.html', 'Facial Fillers Types Longevity Safety Guidelines': 'facial-fillers-types-longevity-safety-guidelines.html', 'Squint Eye Treatment Importance Early Diagnosis': 'squint-eye-treatment-importance-of-early-diagnosis.html', 'Laser Skin Resurfacing Treatment Benefits Risks Downtime': 'laser-skin-resurfacing-treatment-benefits-risks-downtime.html', 'Arm Lift Surgery Ideal Candidates Recovery Timeline': 'arm-lift-surgery-ideal-candidates-recovery-timeline.html', 'Beard Moustache Hair Transplant Procedure Results': 'beard-moustache-hair-transplant-procedure-results.html', 'Brow Lift Surgery - Restoring Youthful Facial Expressions': 'brow-lift-surgery-restoring-youthful-facial-expressions.html', 'Glaucoma Awareness Early Detection Long Term Vision Care': 'glaucoma-awareness-early-detection-long-term-vision-care.html', ' Pigmentation Treatments - Safe Solutions for Indian Skin': 'pigmentation-treatments-safe-solutions-for-indian-skin.html', 'Body Contouring Surgery After Weight Loss Complete Treatment Plan': 'body-contouring-surgery-after-weight-loss-complete-treatment-plan.html', 'FUE vs FUT Hair Transplant Technique Comparison Guide': 'fue-vs-fut-hair-transplant-technique-comparison-guide.html', 'Jawline Enhancement Fillers vs Surgical Options Explained': 'jawline-enhancement-fillers-vs-surgical-options-explained.html', 'Cataract Surgery Advances Faster Recovery Improved Vision': 'cataract-surgery-advances-faster-recovery-improved-vision.html', 'Acne Scar Treatments Lasers Peels Microneedling Compared': 'acne-scar-treatments-lasers-peels-microneedling-compared.html', 'Tummy Tuck vs Liposuction Choosing the Right Body Procedure': 'tummy-tuck-vs-liposuction-choosing-the-right-body-procedure.html', 'Hair Loss in Women Medical Causes Treatment Options': 'hair-loss-in-women-medical-causes-treatment-options.html', 'Blepharoplasty for Tired Eyes Surgical Non Surgical Options': 'blepharoplasty-for-tired-eyes-surgical-non-surgical-options.html', 'Dry Eye Syndrome Causes Treatment  When to See an Eye Specialist': 'dry-eye-syndrome-causes-treatment-when-to-see-an-eye-specialist.html', 'Chemical Peels Choosing the Right Peel for Your Skin Type': 'chemical-peels-choosing-the-right-peel-for-your-skin-type.html', 'Liposuction Safety Medical Criteria for Ideal Candidates': 'liposuction-safety-medical-criteria-for-ideal-candidates.html', 'PRP Therapy for Hair Loss  Process, Benefits Expected Results': 'prp-therapy-for-hair-loss-process-benefits-expected-results.html', 'Rhinoplasty Planning Balancing Facial Aesthetics Breathing': 'rhinoplasty-planning-balancing-facial-aesthetics-breathing.html', 'LASIK vs SMILE Choosing the Right Vision Correction Surgery': 'lasik-vs-smile-choosing-the-right-vision-correction-surgery.html', 'Squint in Children Early Detection and Treatment for Lifelong Vision Health': 'squint-in-children-early-detection-and-treatment-for-lifelong-vision-health.html', 'Advanced LASIK Techniques Achieving Clear Vision with Modern Technology': 'advanced-lasik-techniques-achieving-clear-vision-with-modern-technology.html', 'Liposuction Recovery Timeline What to Expect in the First 3 Months': 'liposuction-recovery-timeline-what-to-expect-in-the-first-3-months.html', 'Hymen Reconstruction Surgery Myths vs. Medical Facts': 'hymen-reconstruction-surgery-myths-vs-medical-facts.html', 'PostPregnancy Body Contouring Restoring Confidence with Thigh Butt Lift': 'post-pregnancy-body-contouring-restoring-confidence-with-thigh-butt-lift.html', 'How to Prepare for Your Breast Implant Surgery  From PreOp to Recovery': 'how-to-prepare-for-your-breast-implant-surgery-from-pre-op-to-recovery.html', 'Understanding Breast Asymmetry When Surgery Becomes the Best Option': 'understanding-breast-asymmetry-when-surgery-becomes-the-best-option.html', 'Earlobe Repair Rejuvenation Restoring Shape After Piercing or Trauma': 'earlobe-repair-rejuvenation-restoring-shape-after-piercing-or-trauma.html', 'Combining Brow Lift with Blepharoplasty for a More Youthful Appearance': 'combining-brow-lift-with-blepharoplasty-for-a-more-youthful-appearance.html', 'NaturalLooking Hairlines  How Surgeons Design Them for Hair Transplants': 'natural-looking-hairlines-how-surgeons-design-them-for-hair-transplants.html', 'Managing PostOperative Swelling After Chin Implant Surgery': 'managing-post-operative-swelling-after-chin-implant-surgery.html', 'FUE vs FUT Hair Transplant Choosing the Right Technique for You': 'fue-vs-fut-hair-transplant-choosing-the-right-technique-for-you.html', 'Facial Fillers vs. Fat Transfer  Which Is Better for Long-Lasting Volume Restoration': 'facial-fillers-vs-fat-transfer-which-is-better-for-long-lasting-volume-restoration.html', 'Combining Laser Treatments and Chemical Peels for Better Skin Resurfacing Results': 'combining-laser-treatments-and-chemical-peels-for-better-skin-resurfacing-results.html', ' Mommy Makeover Combining Surgeries Safely for Best Results': 'mommy-makeover-combining-surgeries-safely-for-best-results.html', ' Laser Treatments for Pigmentation, Scars Skin Resurfacing': 'laser-treatments-for-pigmentation-scars-skin-resurfacing.html', ' Chemical Peels Types, Indications  Post-Treatment Care': 'chemical-peels-types-indications-post-treatment-care.html', ' Arm Liposuction Targeted Fat Removal for Slimmer Arms': 'arm-liposuction-targeted-fat-removal-for-slimmer-arms.html', 'Vaginoplasty  Labiaplasty  Restoring Confidence Comfort': 'vaginoplasty-labiaplasty-restoring-confidence-comfort.html', 'Body Lift After Massive Weight Loss Complete Contouring Plan': 'body-lift-after-massive-weight-loss-complete-contouring-plan.html', 'Mole, Wart, Skin Lesion Removal Safe Techniques Healing Tips': 'mole-wart-skin-lesion-removal-safe-techniques-healing-tips.html', 'Breast Reduction Relief, Function Aesthetic Benefits': 'breast-reduction-relief-function-aesthetic-benefits.html', 'Breast Augmentation Implants, Fat Transfer Selecting the Right Option': 'breast-augmentation-implants-fat-transfer-selecting-the-right-option.html', 'Fat Transfer Fat Grafting to Face or Hands Process, Benefits Risks': 'fat-transfer-fat-grafting-to-face-or-hands-process-benefits-risks.html', ' Managing Ocular Inflammation Uveitis Latest Treatment Approaches': 'managing-ocular-inflammation-uveitis-latest-treatment-approaches.html', 'Jaw Reduction Surgery – Soften a Square Face Shape': 'jaw-reduction-surgery-soften-a-square-face-shape.html', ' Facial Fillers Dermal Fillers  Types, Safety Longevity': 'facial-fillers-dermal-fillers-types-safety-longevity.html', 'Thread Lift vs Surgical Facelift  Pros, Cons When to Choose': 'thread-lift-vs-surgical-facelift-pros-cons-when-to-choose.html', 'Scar Revision Surgery How to Improve Old Surgical or Accidental Scars': 'scar-revision-surgery-how-to-improve-old-surgical-or-accidental-scars.html', 'Breast Lift Mastopexy Non Implant Option for Sagging Breasts': 'breast-lift-mastopexy-non-implant-option-for-sagging-breasts.html', 'Thigh Lift Surgery Contouring Outer Inner Thighs': 'thigh-lift-surgery-contouring-outer-inner-thighs.html', 'Arm Lift  Brachioplasty What to Expect After Weight Loss': 'arm-lift-brachioplasty-what-to-expect-after-weight-loss.html', 'Male Gynecomastia Surgery Causes, Procedure Recovery': 'male-gynecomastia-surgery-causes-procedure-recovery.html', 'Face Lift Surgery What It Does Recovery Timeline': 'face-lift-surgery-what-it-does-recovery-timeline.html', 'Understanding Glaucoma – Early Detection and Management at Luxor Hospital': 'understanding-glaucoma-early-detection-and-management-at-luxor-hospital.html', 'Top 5 Advancements in Cosmetic Surgery You Should Know About in 2025': 'top-5-advancements-in-cosmetic-surgery-you-should-know-about-in-2025.html', 'Botulinum Injections – Reducing Wrinkles and Fine Lines at Luxor Hospital': 'botulinum-injections-reducing-wrinkles-and-fine-lines-at-luxor-hospital.html', 'Ear Reshaping (Otoplasty) – Correct Prominent or Deformed Ears': 'ear-reshaping-otoplasty-correct-prominent-or-deformed-ears.html', 'Tummy Tuck – Achieving a Firmer Abdomen with Luxor Hospital': 'tummy-tuck-achieving-a-firmer-abdomen-with-luxor-hospital.html', 'Dimple Creation Surgery – Adding Charm to Your Smile': 'dimple-creation-surgery-adding-charm-to-your-smile.html', 'Neck Lift Surgery – Rejuvenate Your Neck Profile': 'neck-lift-surgery-rejuvenate-your-neck-profile.html', ' Understanding the Brazilian Butt Lift - Procedure, Safety, and Results': 'understanding-the-brazilian-butt-lift-procedure-safety-and-results.html', 'Post-Transplant Care – Ensuring Optimal Results for Hair Restoration': 'post-transplant-care-ensuring-optimal-results-for-hair-restoration.html', ' Blepharoplasty Explained – Rejuvenate Your Eyes Safely': 'blepharoplasty-explained.html', ' Liposuction vs. Non-Surgical Fat Reduction – Which Is Right for You?': 'liposuction-vs-non-surgical-fat-reduction.html', ' Cataract Surgery – Advancements and Recovery at Luxor Hospital': 'cataract-surgery-advancements-and-recovery-at-luxor-hospital.html', 'The Science Behind Hair Transplants - What to Expect Before and After Introduction': 'the-science-behind-hair-transplants.html', 'Reshape Your Confidence with Luxor Hospital': 'understanding-rhinoplasty-reshape-your-confidence-with-luxor-hospital.html', 'Hair-Transplant-Techniques': 'regain-your-confidence-with-luxor-hospital-s-hair-transplant-techniques.html', 'Eyelid Surgery': 'revitalize-your-eyes-with-luxor-hospital-s-blepharoplasty-eyelid-surgery.html', 'Brow Lift Surgery': 'enhance-your-facial-harmony-with-luxor-hospital-s-brow-lift-surgery.html', 'Cheek Fat Reduction': 'achieve-a-sculpted-look-with-luxor-hospital-s-cheek-fat-reduction-surgery.html', 'Nose Surgery': 'refine-your-profile-with-luxor-hospital-s-rhinoplasty-nose-surgery.html', 'Chin Implant Surgery': 'enhance-your-jawline-with-luxor-hospital-s-chin-implant-surgery.html', 'liposuction': 'do-s-and-don-ts-an-ultimate-guide-to-the-liposuction-recovery-procedure.html', 'Liposuction': 'blog79.html', 'transplant': 'do-hair-transplant-work-2-types-of-hair-transplant.html', 'body': 'perfect-body-shape-with-vaser-liposuction.html', 'Breast': 'breast-reduction-surgery-know-about-it-all.html', 'nose': '5-benefits-of-nose-surgery.html', 'skin': 'brow-lift-surgery-benefits-risks-procedure.html', 'Hair': 'laser-hair-removal-minimally-invasive-procedure-to-get-rid-of-unwanted-hair.html', 'Hair-Transplant': '2-methods-of-hair-transplant.html'};
+      const blogMapping = {
+        "Natural Hairline Design How Surgeons Plan Hair Transplants":
+          "natural-hairline-design-how-surgeons-plan-hair-transplants.html",
+        "Facial Fillers Types Longevity Safety Guidelines":
+          "facial-fillers-types-longevity-safety-guidelines.html",
+        "Squint Eye Treatment Importance Early Diagnosis":
+          "squint-eye-treatment-importance-of-early-diagnosis.html",
+        "Laser Skin Resurfacing Treatment Benefits Risks Downtime":
+          "laser-skin-resurfacing-treatment-benefits-risks-downtime.html",
+        "Arm Lift Surgery Ideal Candidates Recovery Timeline":
+          "arm-lift-surgery-ideal-candidates-recovery-timeline.html",
+        "Beard Moustache Hair Transplant Procedure Results":
+          "beard-moustache-hair-transplant-procedure-results.html",
+        "Brow Lift Surgery - Restoring Youthful Facial Expressions":
+          "brow-lift-surgery-restoring-youthful-facial-expressions.html",
+        "Glaucoma Awareness Early Detection Long Term Vision Care":
+          "glaucoma-awareness-early-detection-long-term-vision-care.html",
+        " Pigmentation Treatments - Safe Solutions for Indian Skin":
+          "pigmentation-treatments-safe-solutions-for-indian-skin.html",
+        "Body Contouring Surgery After Weight Loss Complete Treatment Plan":
+          "body-contouring-surgery-after-weight-loss-complete-treatment-plan.html",
+        "FUE vs FUT Hair Transplant Technique Comparison Guide":
+          "fue-vs-fut-hair-transplant-technique-comparison-guide.html",
+        "Jawline Enhancement Fillers vs Surgical Options Explained":
+          "jawline-enhancement-fillers-vs-surgical-options-explained.html",
+        "Cataract Surgery Advances Faster Recovery Improved Vision":
+          "cataract-surgery-advances-faster-recovery-improved-vision.html",
+        "Acne Scar Treatments Lasers Peels Microneedling Compared":
+          "acne-scar-treatments-lasers-peels-microneedling-compared.html",
+        "Tummy Tuck vs Liposuction Choosing the Right Body Procedure":
+          "tummy-tuck-vs-liposuction-choosing-the-right-body-procedure.html",
+        "Hair Loss in Women Medical Causes Treatment Options":
+          "hair-loss-in-women-medical-causes-treatment-options.html",
+        "Blepharoplasty for Tired Eyes Surgical Non Surgical Options":
+          "blepharoplasty-for-tired-eyes-surgical-non-surgical-options.html",
+        "Dry Eye Syndrome Causes Treatment  When to See an Eye Specialist":
+          "dry-eye-syndrome-causes-treatment-when-to-see-an-eye-specialist.html",
+        "Chemical Peels Choosing the Right Peel for Your Skin Type":
+          "chemical-peels-choosing-the-right-peel-for-your-skin-type.html",
+        "Liposuction Safety Medical Criteria for Ideal Candidates":
+          "liposuction-safety-medical-criteria-for-ideal-candidates.html",
+        "PRP Therapy for Hair Loss  Process, Benefits Expected Results":
+          "prp-therapy-for-hair-loss-process-benefits-expected-results.html",
+        "Rhinoplasty Planning Balancing Facial Aesthetics Breathing":
+          "rhinoplasty-planning-balancing-facial-aesthetics-breathing.html",
+        "LASIK vs SMILE Choosing the Right Vision Correction Surgery":
+          "lasik-vs-smile-choosing-the-right-vision-correction-surgery.html",
+        "Squint in Children Early Detection and Treatment for Lifelong Vision Health":
+          "squint-in-children-early-detection-and-treatment-for-lifelong-vision-health.html",
+        "Advanced LASIK Techniques Achieving Clear Vision with Modern Technology":
+          "advanced-lasik-techniques-achieving-clear-vision-with-modern-technology.html",
+        "Liposuction Recovery Timeline What to Expect in the First 3 Months":
+          "liposuction-recovery-timeline-what-to-expect-in-the-first-3-months.html",
+        "Hymen Reconstruction Surgery Myths vs. Medical Facts":
+          "hymen-reconstruction-surgery-myths-vs-medical-facts.html",
+        "PostPregnancy Body Contouring Restoring Confidence with Thigh Butt Lift":
+          "post-pregnancy-body-contouring-restoring-confidence-with-thigh-butt-lift.html",
+        "How to Prepare for Your Breast Implant Surgery  From PreOp to Recovery":
+          "how-to-prepare-for-your-breast-implant-surgery-from-pre-op-to-recovery.html",
+        "Understanding Breast Asymmetry When Surgery Becomes the Best Option":
+          "understanding-breast-asymmetry-when-surgery-becomes-the-best-option.html",
+        "Earlobe Repair Rejuvenation Restoring Shape After Piercing or Trauma":
+          "earlobe-repair-rejuvenation-restoring-shape-after-piercing-or-trauma.html",
+        "Combining Brow Lift with Blepharoplasty for a More Youthful Appearance":
+          "combining-brow-lift-with-blepharoplasty-for-a-more-youthful-appearance.html",
+        "NaturalLooking Hairlines  How Surgeons Design Them for Hair Transplants":
+          "natural-looking-hairlines-how-surgeons-design-them-for-hair-transplants.html",
+        "Managing PostOperative Swelling After Chin Implant Surgery":
+          "managing-post-operative-swelling-after-chin-implant-surgery.html",
+        "FUE vs FUT Hair Transplant Choosing the Right Technique for You":
+          "fue-vs-fut-hair-transplant-choosing-the-right-technique-for-you.html",
+        "Facial Fillers vs. Fat Transfer  Which Is Better for Long-Lasting Volume Restoration":
+          "facial-fillers-vs-fat-transfer-which-is-better-for-long-lasting-volume-restoration.html",
+        "Combining Laser Treatments and Chemical Peels for Better Skin Resurfacing Results":
+          "combining-laser-treatments-and-chemical-peels-for-better-skin-resurfacing-results.html",
+        " Mommy Makeover Combining Surgeries Safely for Best Results":
+          "mommy-makeover-combining-surgeries-safely-for-best-results.html",
+        " Laser Treatments for Pigmentation, Scars Skin Resurfacing":
+          "laser-treatments-for-pigmentation-scars-skin-resurfacing.html",
+        " Chemical Peels Types, Indications  Post-Treatment Care":
+          "chemical-peels-types-indications-post-treatment-care.html",
+        " Arm Liposuction Targeted Fat Removal for Slimmer Arms":
+          "arm-liposuction-targeted-fat-removal-for-slimmer-arms.html",
+        "Vaginoplasty  Labiaplasty  Restoring Confidence Comfort":
+          "vaginoplasty-labiaplasty-restoring-confidence-comfort.html",
+        "Body Lift After Massive Weight Loss Complete Contouring Plan":
+          "body-lift-after-massive-weight-loss-complete-contouring-plan.html",
+        "Mole, Wart, Skin Lesion Removal Safe Techniques Healing Tips":
+          "mole-wart-skin-lesion-removal-safe-techniques-healing-tips.html",
+        "Breast Reduction Relief, Function Aesthetic Benefits":
+          "breast-reduction-relief-function-aesthetic-benefits.html",
+        "Breast Augmentation Implants, Fat Transfer Selecting the Right Option":
+          "breast-augmentation-implants-fat-transfer-selecting-the-right-option.html",
+        "Fat Transfer Fat Grafting to Face or Hands Process, Benefits Risks":
+          "fat-transfer-fat-grafting-to-face-or-hands-process-benefits-risks.html",
+        " Managing Ocular Inflammation Uveitis Latest Treatment Approaches":
+          "managing-ocular-inflammation-uveitis-latest-treatment-approaches.html",
+        "Jaw Reduction Surgery – Soften a Square Face Shape":
+          "jaw-reduction-surgery-soften-a-square-face-shape.html",
+        " Facial Fillers Dermal Fillers  Types, Safety Longevity":
+          "facial-fillers-dermal-fillers-types-safety-longevity.html",
+        "Thread Lift vs Surgical Facelift  Pros, Cons When to Choose":
+          "thread-lift-vs-surgical-facelift-pros-cons-when-to-choose.html",
+        "Scar Revision Surgery How to Improve Old Surgical or Accidental Scars":
+          "scar-revision-surgery-how-to-improve-old-surgical-or-accidental-scars.html",
+        "Breast Lift Mastopexy Non Implant Option for Sagging Breasts":
+          "breast-lift-mastopexy-non-implant-option-for-sagging-breasts.html",
+        "Thigh Lift Surgery Contouring Outer Inner Thighs":
+          "thigh-lift-surgery-contouring-outer-inner-thighs.html",
+        "Arm Lift  Brachioplasty What to Expect After Weight Loss":
+          "arm-lift-brachioplasty-what-to-expect-after-weight-loss.html",
+        "Male Gynecomastia Surgery Causes, Procedure Recovery":
+          "male-gynecomastia-surgery-causes-procedure-recovery.html",
+        "Face Lift Surgery What It Does Recovery Timeline":
+          "face-lift-surgery-what-it-does-recovery-timeline.html",
+        "Understanding Glaucoma – Early Detection and Management at Luxor Hospital":
+          "understanding-glaucoma-early-detection-and-management-at-luxor-hospital.html",
+        "Top 5 Advancements in Cosmetic Surgery You Should Know About in 2025":
+          "top-5-advancements-in-cosmetic-surgery-you-should-know-about-in-2025.html",
+        "Botulinum Injections – Reducing Wrinkles and Fine Lines at Luxor Hospital":
+          "botulinum-injections-reducing-wrinkles-and-fine-lines-at-luxor-hospital.html",
+        "Ear Reshaping (Otoplasty) – Correct Prominent or Deformed Ears":
+          "ear-reshaping-otoplasty-correct-prominent-or-deformed-ears.html",
+        "Tummy Tuck – Achieving a Firmer Abdomen with Luxor Hospital":
+          "tummy-tuck-achieving-a-firmer-abdomen-with-luxor-hospital.html",
+        "Dimple Creation Surgery – Adding Charm to Your Smile":
+          "dimple-creation-surgery-adding-charm-to-your-smile.html",
+        "Neck Lift Surgery – Rejuvenate Your Neck Profile":
+          "neck-lift-surgery-rejuvenate-your-neck-profile.html",
+        " Understanding the Brazilian Butt Lift - Procedure, Safety, and Results":
+          "understanding-the-brazilian-butt-lift-procedure-safety-and-results.html",
+        "Post-Transplant Care – Ensuring Optimal Results for Hair Restoration":
+          "post-transplant-care-ensuring-optimal-results-for-hair-restoration.html",
+        " Blepharoplasty Explained – Rejuvenate Your Eyes Safely":
+          "blepharoplasty-explained.html",
+        " Liposuction vs. Non-Surgical Fat Reduction – Which Is Right for You?":
+          "liposuction-vs-non-surgical-fat-reduction.html",
+        " Cataract Surgery – Advancements and Recovery at Luxor Hospital":
+          "cataract-surgery-advancements-and-recovery-at-luxor-hospital.html",
+        "The Science Behind Hair Transplants - What to Expect Before and After Introduction":
+          "the-science-behind-hair-transplants.html",
+        "Reshape Your Confidence with Luxor Hospital":
+          "understanding-rhinoplasty-reshape-your-confidence-with-luxor-hospital.html",
+        "Hair-Transplant-Techniques":
+          "regain-your-confidence-with-luxor-hospital-s-hair-transplant-techniques.html",
+        "Eyelid Surgery":
+          "revitalize-your-eyes-with-luxor-hospital-s-blepharoplasty-eyelid-surgery.html",
+        "Brow Lift Surgery":
+          "enhance-your-facial-harmony-with-luxor-hospital-s-brow-lift-surgery.html",
+        "Cheek Fat Reduction":
+          "achieve-a-sculpted-look-with-luxor-hospital-s-cheek-fat-reduction-surgery.html",
+        "Nose Surgery":
+          "refine-your-profile-with-luxor-hospital-s-rhinoplasty-nose-surgery.html",
+        "Chin Implant Surgery":
+          "enhance-your-jawline-with-luxor-hospital-s-chin-implant-surgery.html",
+        liposuction:
+          "do-s-and-don-ts-an-ultimate-guide-to-the-liposuction-recovery-procedure.html",
+        Liposuction: "blog79.html",
+        transplant: "do-hair-transplant-work-2-types-of-hair-transplant.html",
+        body: "perfect-body-shape-with-vaser-liposuction.html",
+        Breast: "breast-reduction-surgery-know-about-it-all.html",
+        nose: "5-benefits-of-nose-surgery.html",
+        skin: "brow-lift-surgery-benefits-risks-procedure.html",
+        Hair: "laser-hair-removal-minimally-invasive-procedure-to-get-rid-of-unwanted-hair.html",
+        "Hair-Transplant": "2-methods-of-hair-transplant.html",
+      };
       var allBlogs = [];
 
       // Fetch all blogs on page load
@@ -4028,14 +4197,14 @@
               .join(" ");
             list.innerHTML += `
                 <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                            <a href="blogs/${blogMapping[data.permalink] || (data.permalink + '.html')}" class="blog-card__link">
+                            <a href="blogs/${blogMapping[data.permalink] || data.permalink + ".html"}" class="blog-card__link">
                     <div class="blog-one__single">
                         <div class="blog-one__img aspect-ratio-16-9">
                             
                             <img src="${data.thumbnail}" alt="Blog">
                         </div>
                         <div class="blog-one__content">
-                            <h3 class="blog-one__title"><a href="blogs/${blogMapping[data.permalink] || (data.permalink + '.html')}">${data.metaTitle}</a></h3>
+                            <h3 class="blog-one__title"><a href="blogs/${blogMapping[data.permalink] || data.permalink + ".html"}">${data.metaTitle}</a></h3>
                             <div class= "blog-card-bottom">
                                 <span class="blog-card__link__back"><span class="icon-duble-arrow"></span>Read More</span>
                             <span class="blog-block__meta" id="blog-date">${date}</span>
@@ -4051,7 +4220,7 @@
       }
 
       // Event listener for search input field
-      document
+      (document
         .getElementById("searchInput")
         ?.addEventListener("input", function (event) {
           var keyword = event.target.value.trim().toLowerCase(); // Get the entered search keyword
@@ -4084,7 +4253,7 @@
         // Show all blogs initially
         document.addEventListener("DOMContentLoaded", function () {
           getData(allBlogs);
-        });
+        }));
     </script>
 
     <script>

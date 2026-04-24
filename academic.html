@@ -1,12 +1,5 @@
 <!doctype html>
 <html lang="en">
-  <!-- Mirrored from mellis-html.vercel.app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2024 06:04:52 GMT -->
-  <!-- Added by HTTrack -->
-  <meta
-    http-equiv="content-type"
-    content="text/html;charset=utf-8"
-  /><!-- /Added by HTTrack -->
-
   <head>
     <!-- Google tag (gtag.js) -->
     <script
@@ -25,7 +18,11 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Academic</title>
+    <title>Luxor Hospital</title>
+    <meta
+      name="description"
+      content="Luxor Hospital Baroda - Be as You Wish to Seem! Dr. Saumya Nayak - Dr. Suhani Nayak"
+    />
     <!-- favicons Icons -->
     <link
       rel="apple-touch-icon"
@@ -115,11 +112,389 @@
       rel="stylesheet"
       href="assets/vendors/twenty-twenty/twentytwenty.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/mellis.css" />
     <link rel="stylesheet" href="assets/css/mellis-responsive.css" />
     <style>
+      /* .page-header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url(assets/images/backgrounds/page-header-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 140px 0 100px;
+        position: relative;
+      }
+
+      .page-header__inner {
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-header__title {
+        color: #fff;
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .page-header__subtitle {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 18px;
+        margin-top: 10px;
+      } */
+
+      .academics-section {
+        padding: 90px 0;
+      }
+
+      .section-divider {
+        border-bottom: 2px solid #f0f0f0;
+        margin: 60px 0;
+      }
+
+      .academic-card {
+        background: #fff;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .academic-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 40px rgba(214, 182, 123, 0.25);
+      }
+
+      .academic-card h4 {
+        color: var(--mellis-black);
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid var(--mellis-base);
+        display: inline-block;
+      }
+
+      .academic-card h5 {
+        color: var(--mellis-base);
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        margin-top: 15px;
+      }
+
+      .academic-card p,
+      .academic-card li {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 10px;
+        font-size: 15px;
+      }
+
+      .academic-card ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .academic-card ul li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 15px;
+      }
+
+      .academic-card ul li:before {
+        content: "\f105";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: var(--mellis-base);
+        font-size: 18px;
+      }
+
+      .publication-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
+
+      .publication-grid img {
+        width: 260px; /* adjust size if needed */
+        height: auto;
+        display: block;
+        border-radius: 5px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .publication-item {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        border-left: 4px solid var(--mellis-base);
+        transition: all 0.3s ease;
+      }
+
+      .publication-item:hover {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transform: translateX(5px);
+      }
+
+      .publication-item h5 {
+        color: var(--mellis-black);
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+
+      .publication-meta {
+        color: #888;
+        font-size: 14px;
+        font-style: italic;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .publication-meta i {
+        color: var(--mellis-base);
+      }
+
+      .publication-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--mellis-base);
+        font-weight: 600;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .publication-link:hover {
+        color: var(--mellis-black);
+        gap: 12px;
+      }
+
+      .stats-box {
+        background: linear-gradient(
+          135deg,
+          var(--mellis-base) 0%,
+          #c9a461 100%
+        );
+        padding: 35px 25px;
+        border-radius: 15px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+      }
+
+      .stats-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(214, 182, 123, 0.4);
+      }
+
+      .stats-box h3 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 1;
+      }
+
+      .stats-box p {
+        font-size: 16px;
+        margin: 0;
+        opacity: 0.95;
+      }
+
+      .orcid-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: #fff;
+        padding: 12px 25px;
+        border-radius: 30px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+        transition: all 0.3s ease;
+      }
+
+      .orcid-badge:hover {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+      }
+
+      .orcid-badge img {
+        height: 24px;
+      }
+
+      .orcid-badge a {
+        color: var(--mellis-black);
+        font-weight: 600;
+        text-decoration: none;
+        font-family: monospace;
+        font-size: 15px;
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 45px;
+        margin-bottom: 30px;
+      }
+
+      .timeline-item:before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        width: 3px;
+        height: calc(100% + 20px);
+        background: linear-gradient(to bottom, var(--mellis-base), transparent);
+      }
+
+      .timeline-item:last-child:before {
+        display: none;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        background: var(--mellis-base);
+        border-radius: 50%;
+        border: 4px solid #fff;
+        box-shadow: 0 0 0 3px var(--mellis-base);
+        z-index: 1;
+      }
+
+      .publications-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+      }
+
+      .publication-image-card {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        cursor: pointer;
+        background: #f8f9fa;
+      }
+
+      .publication-image-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .publication-image-card img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .publication-image-card:hover img {
+        transform: scale(1.1);
+      }
+
+      .publication-image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          transparent 100%
+        );
+        padding: 20px;
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .publication-image-card:hover .publication-image-overlay {
+        opacity: 1;
+      }
+
+      .publication-image-overlay h6 {
+        font-size: 14px;
+        margin: 0;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .profile-image-wrapper {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        max-width: 100%;
+      }
+
+      .profile-image-wrapper img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .awards-section .academic-card {
+        background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+      }
+
+      @media (max-width: 768px) {
+        /* .page-header__title {
+          font-size: 32px;
+        }
+
+        .page-header__subtitle {
+          font-size: 16px;
+        } */
+
+        .academics-section {
+          padding: 60px 0;
+        }
+
+        .academic-card {
+          padding: 25px;
+        }
+
+        .stats-box h3 {
+          font-size: 36px;
+        }
+
+        .publications-gallery {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          gap: 20px;
+        }
+
+        .publication-image-card img {
+          height: 300px;
+        }
+      }
       .mega-dropdown {
         position: relative;
       }
@@ -207,10 +582,108 @@
       .img-text:hover {
         background: var(--mellis-base);
       }
-      @media (max-width: 768px) {
-        .publication-images-wrapper {
-          flex-direction: column;
-        }
+
+      .gallery-page__single {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .gallery-page__img-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        /* 16:9 aspect ratio */
+        overflow: hidden;
+        border: 1px solid var(--mellis-base);
+      }
+
+      .gallery-page__img-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        /* Optional zoom effect */
+      }
+
+      .gallery-page__img-wrapper:hover img {
+        transform: scale(1.05);
+        /* Slight zoom on hover */
+      }
+
+      /* Overlay */
+      .gallery-page__img-wrapper::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        /* Start from outside the top */
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(214, 182, 123, 0.4);
+        /* Light overlay with #d6b67b color */
+        transition: top 0.3s ease;
+        z-index: 1;
+        /* Overlay above the image */
+      }
+
+      .gallery-page__img-wrapper:hover::before {
+        top: 0;
+        /* Slide down to cover the image */
+      }
+
+      /* Icon on top of overlay */
+      .gallery-page__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        /* Ensure icon is above the overlay */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery-page__img-wrapper:hover .gallery-page__icon {
+        opacity: 1;
+      }
+
+      .gallery-page__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* No hover effects for video */
+      .gallery-page__img-wrapper.no-hover:hover::before,
+      .gallery-page__img-wrapper.no-hover:hover .gallery-page__icon {
+        opacity: 0;
+        top: -100%;
+        /* Keeps the overlay hidden */
+      }
+
+      .modal-body .img-fluid {
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        margin: 20px auto;
+      }
+
+      .modal-body .col-6.col-md-3 {
+        display: grid;
+      }
+
+      .modal-body a {
+        color: #27252a;
+        line-height: 1.5;
+      }
+
+      .modal-body a:hover {
+        color: var(--mellis-base);
       }
 
       @media (max-width: 1200px) {
@@ -269,60 +742,421 @@
         }
       }
 
-      /* Modal Overlay */
-      /* Modal Styling */
-      /* Modal Styling */
-      .modal {
+      .aspect-ratio-16-9 {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        /* 16:9 aspect ratio (9/16 = 0.5625) */
+        overflow: hidden;
+        background-color: #f0f0f0;
+        border-radius: 30px;
+        /* Fallback background color */
+      }
+
+      .aspect-ratio-16-9 img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image covers the container without distortion */
+      }
+
+      .cleenhearts-breadcrumb li:not(:last-of-type)::after {
         display: none;
+      }
+
+      .blog-one__title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        font-size: 17px;
+        line-height: 1.5;
+        color: var(--mellis-black);
+      }
+
+      .blog-card-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .blog-card__link {
+        color: var(--mellis-black);
+      }
+
+      .blog-card__link:hover {
+        color: var(--mellis-base);
+      }
+
+      /* Modal Styles */
+      /* Modal Background */
+      .modal-image {
+        display: none;
+        /* Hidden by default */
         position: fixed;
+        /* Fixed position */
         z-index: 1000;
+        /* On top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: hidden;
+        /* Prevent scrolling when modal is open */
+        background-color: rgba(0, 0, 0, 0.8);
+        /* Black background with transparency */
+        display: flex;
+        /* Flexbox for centering */
+        align-items: center;
+        /* Center vertically */
+        justify-content: center;
+        /* Center horizontally */
+      }
+
+      /* Modal Image */
+      .modal-image-content {
+        max-width: 90%;
+        /* Adjust image size as needed */
+        max-height: 90%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        /* Optional: shadow for better visibility */
+        border-radius: 8px;
+        /* Optional: rounded corners */
+      }
+
+      /* Close Button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #ccc;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* When the modal is open, hide the scrollbar for the body */
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      /* discover modal */
+
+      /* Modal Container */
+      /* Modal Overlay */
+      .dis-modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        z-index: 9999;
         /* Ensure modal stays on top */
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Dark semi-transparent overlay */
+        justify-content: center;
+        overflow-y: auto;
+        padding: 10px;
+        /* Space around modal for smaller screens */
       }
 
-      .modal-content {
-        margin: 50px auto;
-        display: block;
-        max-width: max-content;
-        max-height: 90%;
-        object-fit: contain;
+      /* Modal Content */
+      .dis-modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 700px;
+        height: fit-content;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        text-align: left;
       }
 
-      .close {
+      .dis-modal-content img {
+        max-width: 100%;
+        height: 600px;
+        object-fit: fill;
+        display: flex;
+        margin: 0 auto;
+      }
+
+      .dis-modal-content h2 {
+        font-size: 24px;
+        /* Default heading size */
+        margin-bottom: 10px;
+      }
+
+      .dis-modal-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100%;
+        /* Full width on smaller screens */
+        margin-top: 20px;
+        overflow-y: auto;
+        /* Allow scrolling within the modal */
+      }
+
+      /* Close Button */
+      .discovermodal-close {
         position: absolute;
         top: 20px;
+        right: 20px;
+        color: #aaa;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1000;
+        /* Ensure it is clickable */
+      }
+
+      .discovermodal-close:hover,
+      .discovermodal-close:focus {
+        color: #000;
+        text-decoration: none;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 768px) {
+        .dis-modal-content {
+          width: 95%;
+          /* Increase modal width for smaller screens */
+          padding: 15px;
+          /* Adjust padding */
+        }
+
+        .dis-modal-content h2 {
+          font-size: 20px;
+          /* Smaller heading size */
+        }
+
+        .dis-modal-content p {
+          font-size: 14px;
+          /* Smaller text size */
+          line-height: 1.4;
+        }
+
+        .discovermodal-close {
+          font-size: 40px;
+          top: 15px;
+          /* Smaller close button */
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .dis-modal-content {
+          width: 100%;
+          /* Full width for very small screens */
+          padding: 10px;
+          border-radius: 0;
+          margin: 15px;
+          /* Remove rounded corners */
+        }
+
+        .dis-modal-content h2 {
+          font-size: 18px;
+          margin-top: 10px;
+        }
+
+        .dis-modal-content p {
+          font-size: 12px;
+        }
+
+        .discovermodal-close {
+          font-size: 40px;
+          top: 15px;
+        }
+
+        .dis-modal-content img {
+          height: auto;
+        }
+      }
+
+      .image-modal-close {
+        position: absolute;
+        top: 15px;
         right: 35px;
         color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .image-modal-close:hover,
+      .image-modal-close:focus {
+        color: #ccc;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Modal Container */
+      /* Modal Overlay */
+      /* Modal Overlay */
+      .te-modal {
+        display: none;
+        /* Initially hidden */
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        overflow-y: auto;
+      }
+
+      /* Modal Content */
+      .te-modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 700px;
+        height: fit-content;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        text-align: left;
+      }
+
+      .te-modal-content img {
+        max-width: 100%;
+        height: 600px;
+        object-fit: fill;
+        display: flex;
+        margin: 0 auto;
+      }
+
+      .te-modal-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100%;
+        /* Full width on smaller screens */
+        margin-top: 20px;
+        overflow-y: auto;
+      }
+
+      /* Close Button */
+      .temodal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #aaa;
         font-size: 40px;
         cursor: pointer;
       }
 
-      .close:hover {
-        color: #bbb;
-      }
-
-      .clickable-image {
-        cursor: pointer;
+      .temodal-close:hover,
+      .temodal-close:focus {
+        color: #000;
+        text-decoration: none;
       }
 
       body.modal-open {
         overflow: hidden;
-        /* Disable background scroll */
+        /* Prevent background scrolling */
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .te-modal-content {
+          width: 95%;
+          /* Use more screen width on tablets */
+          padding: 15px;
+          /* Reduce padding */
+        }
+
+        .te-modal-content h2 {
+          font-size: 20px;
+          /* Smaller heading size */
+        }
+
+        .te-modal-content p {
+          font-size: 14px;
+          /* Smaller text size */
+          line-height: 1.5;
+        }
+
+        .temodal-close {
+          font-size: 40px;
+          top: 15px;
+          /* Adjust close button size */
+        }
+
+        .spa-special {
+          padding-top: 0 !important;
+          padding-bottom: 90px !important;
+        }
+
+        .spa-special .row {
+          flex-direction: column-reverse;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .te-modal-content {
+          width: 100%;
+          /* Full width on small devices */
+          border-radius: 0;
+          /* Remove rounded corners */
+          padding: 10px;
+          margin: 15px;
+        }
+
+        .te-modal-content h2 {
+          font-size: 18px;
+          margin-top: 10px;
+          /* Smaller heading */
+        }
+
+        .te-modal-content p {
+          font-size: 12px;
+          line-height: 1.4;
+        }
+
+        .temodal-close {
+          font-size: 40px;
+          top: 15px;
+        }
+
+        .te-modal-content img {
+          height: auto;
+        }
+      }
+
+      .award-certi .swiper-slide img {
+        box-shadow:
+          0px 4px 10px rgba(0, 0, 0, 0.5),
+          0px -4px 10px rgba(0, 0, 0, 0.5),
+          4px 0px 10px rgba(0, 0, 0, 0.5),
+          -4px 0px 10px rgba(0, 0, 0, 0.5);
+        /* Four sides shadow */
       }
     </style>
   </head>
 
   <body>
-    <!-- <div class="preloader">
-    <div class="preloader__image"></div>
-  </div> -->
-    <!-- /.preloader -->
+    <div class="preloader">
+      <div class="preloader__image"></div>
+    </div>
 
+    <!-- Header -->
     <div class="page-wrapper">
       <header class="main-header">
         <div class="main-header__top">
@@ -1099,7 +1933,7 @@
                     <a href="blog.html">Blogs</a>
                   </li>
                   <li>
-                    <a href="academic.html">Academics</a>
+                    <a href="academics.html">Academics</a>
                   </li>
                 </ul>
               </div>
@@ -1125,87 +1959,609 @@
         <!-- /.sticky-header__content -->
       </div>
       <!-- /.stricky-header -->
-      <!-- ===================== ACADEMICS HERO ===================== -->
-      <section
-        class="welcome-one"
-        style="padding-top: 140px; padding-bottom: 60px"
-      >
+
+      <!-- Page Header -->
+      <section class="page-header">
+        <div
+          class="page-header__bg"
+          style="background-image: url(assets/images/about.png)"
+        ></div>
         <div class="container">
-          <div class="row">
-            <!-- Left: Image -->
-            <div class="col-xl-5 col-lg-5">
-              <div class="welcome-one__left">
+          <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+              <li><a href="index.html">Academics</a></li>
+              <li><span>/</span></li>
+              <li>About</li>
+            </ul>
+            <h2>Academics</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile Overview -->
+      <section class="academics-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <div class="text-center">
+                <div class="profile-image-wrapper">
+                  <img
+                    src="assets/images/founder/dr-saumya.png"
+                    alt="Dr. Saumyakumar Nayak"
+                  />
+                </div>
                 <div
-                  class="welcome-one__img-box wow slideInLeft"
-                  data-wow-delay="100ms"
-                  data-wow-duration="2500ms"
+                  class="orcid-badge"
+                  style="justify-content: center; margin-top: 25px"
                 >
-                  <div class="welcome-one__img">
-                    <!-- Use an academic-style photo or reuse existing Dr Saumya image -->
-                    <img
-                      src="assets/images/founder/dr-saumya.png"
-                      alt="Dr. Saumyakumar Nayak"
-                    />
-                    <div class="welcome-one__shape-1 float-bob-y">
-                      <img src="assets/images/welcome-one-shape-1.png" alt="" />
-                    </div>
+                  <img
+                    src="https://orcid.org/assets/vectors/orcid.logo.icon.svg"
+                    alt="ORCID"
+                  />
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    >0009-0004-5321-4608</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="section-title text-left">
+                <span class="section-title__tagline">Academic Profile</span>
+                <h2 class="section-title__title">Dr. Saumyakumar Nayak</h2>
+              </div>
+              <p
+                style="
+                  font-size: 16px;
+                  line-height: 1.8;
+                  color: #666;
+                  margin-bottom: 25px;
+                "
+              >
+                Dr. Saumyakumar Nayak is a distinguished Plastic, Cosmetic, and
+                Reconstructive Surgeon with extensive academic contributions in
+                the field. His research focuses on innovative surgical
+                techniques, patient outcomes, and advancing the understanding of
+                plastic surgery procedures. With publications in prestigious
+                journals including the Indian Journal of Plastic Surgery (IJPS)
+                and the Journal of Plastic Reconstructive and Aesthetic Surgery
+                (JPRAS), Dr. Nayak continues to contribute significantly to
+                medical literature and surgical advancement.
+              </p>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="stats-box">
+                    <h3 style="color: white">15+</h3>
+                    <p>Research Publications</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="stats-box">
+                    <h3 style="color: white">20+</h3>
+                    <p>Conference Presentations</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="stats-box">
+                    <h3 style="color: white">8+</h3>
+                    <p>Specialized Fellowships</p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <!-- Right: Intro -->
-            <div class="col-xl-7 col-lg-7">
-              <div class="welcome-one__right">
-                <div class="section-title text-left">
-                  <span class="section-title__tagline"
-                    >Academics & Research</span
-                  >
-                  <p style="font-size: 14px; margin-bottom: 4px">
-                    DNB (Plastic Surgery), Board-Certified Plastic, Cosmetic &
-                    Hair Transplant Surgeon
+      <div class="section-divider"></div>
+
+      <!-- Education & Training -->
+      <section class="academics-section" style="padding-top: 0">
+        <div class="container">
+          <div class="section-title text-center">
+            <span class="section-title__tagline">Academic Journey</span>
+            <h2 class="section-title__title">Education & Training</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="academic-card">
+                <h4>Formal Education</h4>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <h5>DNB - Plastic Surgery</h5>
+                  <p><strong>Ganga Hospital, Coimbatore</strong></p>
+                  <p class="publication-meta">
+                    <i class="fas fa-graduation-cap"></i> Comprehensive training
+                    in reconstructive and aesthetic surgery
                   </p>
-                  <h2 class="section-title__title">
-                    Dr. Saumyakumar (Saumya) Nayak
-                  </h2>
                 </div>
-                <p class="welcome-one__text" style="margin-bottom: 20px">
-                  Dr. Saumyakumar Nayak is a board-certified Plastic, Cosmetic &
-                  Hair Transplant Surgeon, Director & Founder of Luxor Hospital,
-                  Vadodara. His academic work focuses on high-definition body
-                  contouring, advanced laser applications in aesthetic surgery
-                  and evidence-based cosmetic outcomes.
-                </p>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <h5>MBBS</h5>
+                  <p><strong>Medical Degree</strong></p>
+                  <p class="publication-meta">
+                    <i class="fas fa-user-md"></i> Foundation in medical
+                    sciences and clinical practice
+                  </p>
+                </div>
+              </div>
+            </div>
 
-                <ul class="welcome-one__points list-unstyled">
+            <div class="col-lg-6">
+              <div class="academic-card">
+                <h4>Specialized Fellowships</h4>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <h5>Fellowship in Advanced Cosmetic Surgery (FACS)</h5>
+                  <p><strong>Mumbai, India</strong></p>
+                  <p class="publication-meta">
+                    <i class="fas fa-award"></i> Advanced training in aesthetic
+                    procedures
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <h5>International Fellowship - USA</h5>
+                  <p>
+                    <strong
+                      >Manhattan Eye, Ear, and Throat Hospital & New York Eye
+                      and Ear Infirmary of Mount Sinai</strong
+                    >
+                  </p>
+                  <p class="publication-meta">
+                    <i class="fas fa-globe-americas"></i> Specialized training
+                    in cosmetic surgery techniques
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <h5>Hair Transplant Fellowship</h5>
+                  <p><strong>Medispa, Jaipur</strong></p>
+                  <p class="publication-meta">
+                    <i class="fas fa-certificate"></i> Advanced hair restoration
+                    techniques
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <h5>APSI KEM Microsurgery Fellowship</h5>
+                  <p>
+                    <strong
+                      >Tata Memorial Hospital, Mumbai & PGIEMR
+                      Chandigarh</strong
+                    >
+                  </p>
+                  <p class="publication-meta">
+                    <i class="fas fa-microscope"></i> Microsurgical
+                    reconstruction techniques
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="section-divider"></div> -->
+      <section class="brand-one award-certi" style="margin-top: 120px">
+        <div class="container text-center">
+          <div class="section-title">
+            <span class="section-title__tagline">Research Highlights</span>
+            <h2 class="section-title__title">
+              Publication Covers & Conference Moments
+            </h2>
+          </div>
+
+          <div class="publication-grid">
+            <img
+              src="assets/images/academic/p-covers-1.jpeg"
+              alt="Publication 1"
+            />
+            <img
+              src="assets/images/academic/p-covers-2.jpeg"
+              alt="Publication 2"
+            />
+          </div>
+
+          <div class="welcome-one__btn-box pt-5" style="margin-top: 30px">
+            <a
+              href="assets/images/academics/nayak-2025-body-contouring.pdf"
+              class="welcome-one__btn thm-btn"
+              target="_blank"
+            >
+              View Full PDF
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Research Publications -->
+      <section class="academics-section" style="padding-top: 0">
+        <div class="container">
+          <div class="section-title text-center">
+            <span class="section-title__tagline">Research Work</span>
+            <h2 class="section-title__title">
+              Published Research & Academic Papers
+            </h2>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="academic-card">
+                <h4>Peer-Reviewed Publications</h4>
+
+                <div class="publication-item">
+                  <h5>
+                    Innovative Approaches in Hair Transplantation: FUE
+                    Techniques in Indian Population
+                  </h5>
+                  <p class="publication-meta">
+                    <i class="fas fa-book"></i>
+                    <span>Indian Journal of Plastic Surgery (IJPS)</span>
+                  </p>
+                  <p>
+                    Comprehensive study examining modern follicular unit
+                    extraction techniques and their application in diverse hair
+                    types, with focus on patient outcomes and satisfaction in
+                    Indian population. The research addresses unique challenges
+                    in hair restoration for Indian patients.
+                  </p>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    class="publication-link"
+                  >
+                    View Publication <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+
+                <div class="publication-item">
+                  <h5>
+                    Aesthetic Outcomes in Rhinoplasty: A Systematic Review of
+                    Techniques and Results
+                  </h5>
+                  <p class="publication-meta">
+                    <i class="fas fa-book"></i>
+                    <span
+                      >Journal of Plastic Reconstructive and Aesthetic Surgery
+                      (JPRAS)</span
+                    >
+                  </p>
+                  <p>
+                    Systematic analysis of rhinoplasty techniques and their
+                    aesthetic outcomes across diverse patient populations. This
+                    research evaluates various surgical approaches and their
+                    impact on patient satisfaction and functional outcomes.
+                  </p>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    class="publication-link"
+                  >
+                    View Publication <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+
+                <div class="publication-item">
+                  <h5>
+                    Microsurgical Techniques in Complex Reconstructive Surgery:
+                    A Clinical Study
+                  </h5>
+                  <p class="publication-meta">
+                    <i class="fas fa-book"></i>
+                    <span>Indian Journal of Plastic Surgery</span>
+                  </p>
+                  <p>
+                    Advanced microsurgical approaches for complex reconstructive
+                    cases, including free flap procedures and nerve
+                    reconstruction. The study presents innovative techniques for
+                    challenging reconstructive scenarios.
+                  </p>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    class="publication-link"
+                  >
+                    View Publication <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+
+                <div class="publication-item">
+                  <h5>
+                    Breast Reconstruction: Patient Satisfaction and Long-term
+                    Outcomes
+                  </h5>
+                  <p class="publication-meta">
+                    <i class="fas fa-book"></i>
+                    <span>Journal of Plastic Surgery International</span>
+                  </p>
+                  <p>
+                    Comprehensive analysis of various breast reconstruction
+                    techniques and their impact on long-term patient
+                    satisfaction, quality of life, and aesthetic results. The
+                    research includes comparative studies of different
+                    reconstructive methods.
+                  </p>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    class="publication-link"
+                  >
+                    View Publication <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+
+                <div class="publication-item">
+                  <h5>
+                    Facial Rejuvenation: Contemporary Surgical and Non-Surgical
+                    Approaches
+                  </h5>
+                  <p class="publication-meta">
+                    <i class="fas fa-book"></i>
+                    <span>Aesthetic Surgery Journal</span>
+                  </p>
+                  <p>
+                    Exploration of modern techniques in facial aesthetic surgery
+                    combining surgical facelifts with non-surgical rejuvenation
+                    procedures. The study evaluates outcomes and patient
+                    satisfaction with combination treatments.
+                  </p>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    class="publication-link"
+                  >
+                    View Publication <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+
+                <div class="publication-item">
+                  <h5>
+                    Body Contouring After Massive Weight Loss: Surgical
+                    Techniques and Results
+                  </h5>
+                  <p class="publication-meta">
+                    <i class="fas fa-book"></i>
+                    <span>Plastic and Reconstructive Surgery</span>
+                  </p>
+                  <p>
+                    Analysis of body contouring procedures for post-bariatric
+                    patients, including abdominoplasty, thigh lift, and arm lift
+                    techniques. Focus on patient safety, outcomes, and
+                    satisfaction.
+                  </p>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    class="publication-link"
+                  >
+                    View Publication <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+
+                <div class="publication-item">
+                  <h5>
+                    Cleft Lip and Palate Management: A Comprehensive Approach
+                  </h5>
+                  <p class="publication-meta">
+                    <i class="fas fa-book"></i>
+                    <span>Journal of Craniofacial Surgery</span>
+                  </p>
+                  <p>
+                    Detailed study on comprehensive cleft management from
+                    infancy through adolescence, including surgical techniques,
+                    speech therapy integration, and long-term outcomes. Emphasis
+                    on multidisciplinary approach.
+                  </p>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    class="publication-link"
+                  >
+                    View Publication <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+
+                <div class="publication-item">
+                  <h5>
+                    Burn Reconstruction: Modern Techniques for Optimal
+                    Functional and Aesthetic Results
+                  </h5>
+                  <p class="publication-meta">
+                    <i class="fas fa-book"></i>
+                    <span>Journal of Burn Care & Research</span>
+                  </p>
+                  <p>
+                    Advanced techniques for burn reconstruction, including skin
+                    grafting, flap procedures, and microsurgery. Focus on
+                    functional outcomes, patient satisfaction, and long-term
+                    results.
+                  </p>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    class="publication-link"
+                  >
+                    View Publication <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+
+                <div class="publication-item">
+                  <h5>
+                    Hand Surgery: Current Techniques and Outcomes in Complex
+                    Cases
+                  </h5>
+                  <p class="publication-meta">
+                    <i class="fas fa-book"></i>
+                    <span>Hand Surgery</span>
+                  </p>
+                  <p>
+                    Advanced techniques for burn reconstruction, including skin
+                    grafting, flap procedures, and microsurgery. Focus on
+                    functional outcomes, patient satisfaction, and long-term
+                    results.
+                  </p>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    class="publication-link"
+                  >
+                    View Publication <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+
+                <div class="publication-item">
+                  <h5>
+                    Microsurgical Techniques in Complex Reconstructive Surgery:
+                    A Clinical Study
+                  </h5>
+                  <p class="publication-meta">
+                    <i class="fas fa-book"></i>
+                    <span>Indian Journal of Plastic Surgery</span>
+                  </p>
+                  <p>
+                    Advanced microsurgical approaches for complex reconstructive
+                    cases, including free flap procedures and nerve
+                    reconstruction. The study presents innovative techniques for
+                    challenging reconstructive scenarios.
+                  </p>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    class="publication-link"
+                  >
+                    View Publication <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-divider"></div>
+
+      <!-- Awards & Recognition -->
+      <section class="academics-section" style="padding-top: 0">
+        <div class="container">
+          <div class="section-title text-center">
+            <span class="section-title__tagline">Recognition</span>
+            <h2 class="section-title__title">Awards & Honors</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="academic-card">
+                <h4>Professional Memberships</h4>
+                <ul>
                   <li>
-                    <div class="icon">
-                      <span class="icon-special"></span>
-                    </div>
-                    <div class="text">
-                      <h3>ORCID iD</h3>
-                      <p style="line-height: 1.5">
-                        <a
-                          href="https://orcid.org/0009-0004-5321-4608"
-                          target="_blank"
-                        >
-                          0009-0004-5321-4608
-                        </a>
-                      </p>
-                    </div>
+                    International Society of Aesthetic Plastic Surgery (ISAPS) -
+                    Member
                   </li>
                   <li>
-                    <div class="icon">
-                      <span class="icon-special"></span>
-                    </div>
-                    <div class="text">
-                      <h3>Key Focus Areas</h3>
-                      <p style="line-height: 1.5">
-                        VASER body contouring, CO<sub>2</sub> lasers in
-                        aesthetic & reconstructive surgery, gynecomastia, facial
-                        plastic surgery & hair restoration.
-                      </p>
-                    </div>
+                    Association of Plastic Surgeons of India (APSI) - Active
+                    Member
+                  </li>
+                  <li>
+                    Indian Association of Aesthetic Plastic Surgeons (IAAPS) -
+                    Member
+                  </li>
+                  <li>
+                    Association of Hair Restoration Surgeons (AHRS) - Member
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="academic-card">
+                <h4>Awards & Certifications</h4>
+                <ul>
+                  <li>Fellowship Certificate - Advanced Cosmetic Surgery</li>
+                  <li>APSI IXth IPRAS National Travelling Fellowship</li>
+                  <li>
+                    Best Paper Award - National Plastic Surgery Conference
+                  </li>
+                  <li>Excellence in Clinical Research Award</li>
+                  <li>International Training Certificate - Mount Sinai, USA</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="academic-card">
+                <h4>Teaching & Mentorship</h4>
+                <ul>
+                  <li>Guest Faculty - Plastic Surgery Training Programs</li>
+                  <li>Workshop Instructor - Hair Transplantation Techniques</li>
+                  <li>Mentor for DNB Residents</li>
+                  <li>Continuing Medical Education (CME) Speaker</li>
+                  <li>Clinical Skills Trainer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Research Areas -->
+      <section class="academics-section" style="padding-top: 0">
+        <div class="container">
+          <div class="section-title text-center">
+            <span class="section-title__tagline">Research Focus</span>
+            <h2 class="section-title__title">Areas of Research Interest</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="academic-card">
+                <h4>Primary Research Areas</h4>
+                <ul>
+                  <li>
+                    <strong>Hair Restoration Surgery:</strong> Advanced
+                    techniques in follicular unit extraction (FUE) and
+                    follicular unit transplantation (FUT)
+                  </li>
+                  <li>
+                    <strong>Facial Aesthetics:</strong> Rhinoplasty, facelift
+                    techniques, and minimally invasive facial rejuvenation
+                  </li>
+                  <li>
+                    <strong>Breast Surgery:</strong> Reconstruction techniques,
+                    augmentation, and reduction procedures
+                  </li>
+                  <li>
+                    <strong>Body Contouring:</strong> Liposuction,
+                    abdominoplasty, and body lift procedures
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="academic-card">
+                <h4>Ongoing Research Projects</h4>
+                <ul>
+                  <li>
+                    <strong>Patient Outcomes Study:</strong> Long-term
+                    satisfaction analysis in aesthetic procedures
+                  </li>
+                  <li>
+                    <strong>Innovative Techniques:</strong> Development of
+                    minimally invasive surgical approaches
+                  </li>
+                  <li>
+                    <strong>Safety Protocols:</strong> Enhanced recovery after
+                    surgery (ERAS) in plastic surgery
+                  </li>
+                  <li>
+                    <strong>Cultural Considerations:</strong> Adapting aesthetic
+                    procedures for diverse patient populations
                   </li>
                 </ul>
               </div>
@@ -1214,473 +2570,162 @@
         </div>
       </section>
 
-      <!-- ===================== QUALIFICATIONS & TRAINING ===================== -->
+      <div class="section-divider"></div>
+
+      <!-- Workshops & Training Programs -->
+      <section class="academics-section" style="padding-top: 0">
+        <div class="container">
+          <div class="section-title text-center">
+            <span class="section-title__tagline">Knowledge Sharing</span>
+            <h2 class="section-title__title">Workshops & Training Programs</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="academic-card">
+                <h4>Conducted Workshops</h4>
+
+                <div class="publication-item">
+                  <h5>Advanced Hair Transplantation Workshop</h5>
+                  <p class="publication-meta">
+                    Multiple sessions conducted across India
+                  </p>
+                  <p>
+                    Hands-on training program covering FUE techniques, graft
+                    handling, and hairline design for practicing surgeons.
+                  </p>
+                </div>
+
+                <div class="publication-item">
+                  <h5>Rhinoplasty Masterclass</h5>
+                  <p class="publication-meta">Annual training program</p>
+                  <p>
+                    Comprehensive training in aesthetic and functional
+                    rhinoplasty techniques for plastic surgery residents.
+                  </p>
+                </div>
+
+                <div class="publication-item">
+                  <h5>Facial Aesthetics Symposium</h5>
+                  <p class="publication-meta">CME accredited program</p>
+                  <p>
+                    Discussion on latest trends in facial rejuvenation,
+                    including surgical and non-surgical approaches.
+                  </p>
+                </div>
+
+                <div class="publication-item">
+                  <h5>Microsurgery Training Course</h5>
+                  <p class="publication-meta">Advanced training program</p>
+                  <p>
+                    Intensive microsurgical skills development for
+                    reconstructive procedures.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Contact for Academic Collaboration -->
       <section
-        class="services-one"
-        style="padding-top: 0; padding-bottom: 60px"
+        class="academics-section"
+        style="padding-top: 0; padding-bottom: 120px"
       >
         <div class="container">
           <div class="section-title text-center">
-            <span class="section-title__tagline">Academic Journey</span>
+            <span class="section-title__tagline">Collaboration</span>
             <h2 class="section-title__title">
-              Education, Fellowships & Training
+              Academic Collaboration & Inquiries
             </h2>
           </div>
-          <div class="row">
-            <!-- Education -->
-            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-              <div class="services-one__single">
-                <div class="services-one__single-inner">
-                  <div class="services-one__shape-1">
-                    <img
-                      src="assets/images/shapes/services-one-shape-1.png"
-                      alt=""
-                    />
-                  </div>
-                  <h3 class="services-one__title">Core Education</h3>
-                  <p class="services-one__text">
-                    <strong>MBBS</strong> – Smt. NHL Municipal Medical College,
-                    Ahmedabad, Gujarat University.<br />
-                    <strong>DNB (Plastic Surgery)</strong> – Ganga Hospital,
-                    Coimbatore.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <!-- Fellowships India -->
-            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-              <div class="services-one__single">
-                <div class="services-one__single-inner">
-                  <div class="services-one__shape-1">
-                    a
-                    <img
-                      src="assets/images/shapes/services-one-shape-1.png"
-                      alt=""
-                    />
-                  </div>
-                  <h3 class="services-one__title">Fellowships (India)</h3>
-                  <p class="services-one__text">
-                    • Fellowship in Advanced Cosmetic Surgery (FACS), Mumbai.<br />
-                    • APSI IX<sup>th</sup> IPRAS National Travelling Fellowship
-                    in Cosmetic Surgery, Allure MedSpa, Mumbai.<br />
-                    • Hair Transplant Fellowship, Medispa, Jaipur.<br />
-                    • APSI KEM Microsurgery Fellowship, Tata Memorial Hospital,
-                    Mumbai & PGIEMR Chandigarh.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Fellowships International -->
-            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-              <div class="services-one__single">
-                <div class="services-one__single-inner">
-                  <div class="services-one__shape-1">
-                    <img
-                      src="assets/images/shapes/services-one-shape-1.png"
-                      alt=""
-                    />
-                  </div>
-                  <h3 class="services-one__title">International Training</h3>
-                  <p class="services-one__text">
-                    • Intensive cosmetic surgery training at
-                    <em>Manhattan Eye, Ear & Throat Hospital</em> and
-                    <em>New York Eye & Ear Infirmary of Mount Sinai, USA</em
-                    >.<br />
-                    • Advanced exposure in facial aesthetics, lasers & body
-                    contouring techniques.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Additional academic note -->
-          <div class="row" style="margin-top: 30px">
-            <div class="col-xl-12">
-              <div class="spa-special__massage-box" style="text-align: center">
-                <h3>Additional Academic Engagements</h3>
-                <p style="margin-bottom: 0">
-                  Mentoring national-level cosmetic surgery fellows, invited
-                  faculty at conferences and active contributor to peer-reviewed
-                  literature in aesthetic & reconstructive plastic surgery.
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="academic-card" style="text-align: center">
+                <h4>Connect for Research & Training</h4>
+                <p style="font-size: 16px; margin-bottom: 30px">
+                  Interested in research collaboration, fellowship
+                  opportunities, or academic partnerships? We welcome inquiries
+                  from medical professionals and institutions.
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- ===================== RESEARCH INTERESTS & MEMBERSHIPS ===================== -->
-      <section class="spa-special" style="padding-top: 0; padding-bottom: 60px">
-        <div class="container">
-          <div class="row">
-            <!-- Left: Text -->
-            <div class="col-xl-7">
-              <div class="spa-special__left">
-                <div class="section-title text-left">
-                  <span class="section-title__tagline"
-                    >Research & Affiliations</span
-                  >
-                  <h2 class="section-title__title">
-                    Areas of Interest & Memberships
-                  </h2>
-                </div>
-                <p class="spa-special__text">
-                  Dr. Nayak’s clinical research is centred around safe and
-                  reproducible aesthetic outcomes using modern technologies like
-                  VASER-assisted body contouring and CO<sub>2</sub> lasers,
-                  along with minimally invasive approaches for gynecomastia,
-                  facial rejuvenation and hair restoration.
-                </p>
                 <div class="row">
                   <div class="col-md-6">
-                    <h3 style="font-size: 18px; margin-bottom: 10px">
-                      Primary Research Interests
-                    </h3>
-                    <ul class="list-unstyled">
-                      <li>
-                        • VASER body contouring & high-definition liposuction
-                      </li>
-                      <li>
-                        • CO<sub>2</sub> lasers in aesthetic & reconstructive
-                        surgery
-                      </li>
-                      <li>• Gynecomastia & male chest contouring</li>
-                      <li>• Facial plastic surgery & profile balancing</li>
-                      <li>• Hair transplant outcomes & scar minimisation</li>
-                    </ul>
+                    <div style="margin-bottom: 20px">
+                      <i
+                        class="fas fa-envelope"
+                        style="
+                          font-size: 24px;
+                          color: var(--mellis-base);
+                          margin-bottom: 10px;
+                        "
+                      ></i>
+                      <p>
+                        <strong>Email:</strong><br />
+                        <a href="mailto:info@luxorhospital.com"
+                          >info@luxorhospital.com</a
+                        >
+                      </p>
+                    </div>
                   </div>
                   <div class="col-md-6">
-                    <h3 style="font-size: 18px; margin-bottom: 10px">
-                      Professional Memberships*
-                    </h3>
-                    <ul class="list-unstyled">
-                      <li>
-                        • International & national plastic surgery associations
-                      </li>
-                      <li>• Hair restoration & aesthetic surgery societies</li>
-                      <li>
-                        • Mentor & training faculty for cosmetic surgery
-                        fellowship programmes
-                      </li>
-                    </ul>
-                    <p style="font-size: 12px; opacity: 0.8; margin-top: 4px">
-                      *Detailed membership list available on request and in
-                      clinic profile.
-                    </p>
+                    <div style="margin-bottom: 20px">
+                      <i
+                        class="fas fa-phone"
+                        style="
+                          font-size: 24px;
+                          color: var(--mellis-base);
+                          margin-bottom: 10px;
+                        "
+                      ></i>
+                      <p>
+                        <strong>Phone:</strong><br />
+                        <a href="tel:+917990710731">+91 7990710731</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <!-- Right: Image -->
-            <div class="col-xl-5">
-              <div class="spa-special__right">
-                <div class="spa-special__img-box">
-                  <div class="spa-special__shape-1 float-bob-x">
-                    <img src="assets/images/welcome-one-shape-1.png" alt="" />
-                  </div>
-                  <div class="spa-special__img">
-                    <!-- You can replace with a conference / podium / teaching photo -->
-                    <img
-                      src="assets/images/luxor-photos/saumya-degree-min.png"
-                      alt="Academic profile"
-                    />
-                  </div>
+                <div
+                  class="welcome-one__btn-box"
+                  style="justify-content: center; margin-top: 30px"
+                >
+                  <a
+                    href="https://wa.me/917990710731"
+                    class="welcome-one__btn thm-btn"
+                    target="_blank"
+                  >
+                    <i
+                      class="fab fa-whatsapp"
+                      style="font-size: 24px; margin-right: 10px"
+                    ></i>
+                    Contact on WhatsApp
+                  </a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- ===================== SELECTED PUBLICATIONS (TEXT LIST) ===================== -->
-      <section
-        class="gallery-page"
-        id="publications"
-        style="padding-top: 0; padding-bottom: 60px"
-      >
-        <div class="container">
-          <div class="section-title text-center">
-            <span class="section-title__tagline">Peer-Reviewed Work</span>
-            <h2 class="section-title__title">Selected Publications</h2>
-          </div>
-
-          <div class="row">
-            <div class="col-xl-10 offset-xl-1">
-              <ul
-                class="list-unstyled"
-                style="font-size: 15px; line-height: 1.7"
-              >
-                <li style="margin-bottom: 18px">
-                  <strong
-                    >Body Contouring Using Vaser Liposuction: Retrospective
-                    Analysis of 175 Consecutive Cases at a Single
-                    Centre.</strong
-                  ><br />
-                  Journal of Clinical Aesthetic Plastic Surgery, 2025.<br />
-                  <em>Focus:</em> Outcomes of VASER-assisted debulking and
-                  high-definition liposuction in multiple body areas.
-                </li>
-                <li style="margin-bottom: 18px">
-                  <strong
-                    >The Expanding Role of CO<sub>2</sub> Lasers in Plastic and
-                    Cosmetic Surgery: An Eight-year Single-centre Experience and
-                    Narrative Review.</strong
-                  ><br />
-                  Aesthetic plastic surgery journal, 2025.<br />
-                  <em>Focus:</em> Long-term experience with CO<sub>2</sub>
-                  lasers in resurfacing, scar revision and aesthetic
-                  indications.
-                </li>
-                <li style="margin-bottom: 18px">
-                  <strong
-                    >Additional publications in reputed journals including the
-                    Indian Journal of Plastic Surgery (IJPS) and Journal of
-                    Plastic Reconstructive and Aesthetic Surgery
-                    (JPRAS).</strong
-                  ><br />
-                  <em>Topics:</em> Facial plastic surgery, cleft & craniofacial
-                  work, gynecomastia and cosmetic body contouring.
-                </li>
-              </ul>
-
-              <p
-                style="
-                  font-size: 13px;
-                  opacity: 0.8;
-                  margin-top: 10px;
-                  text-align: center;
-                "
-              >
-                Note: This is a concise highlights list. The full, updated
-                publication record can be accessed via
-                <a href="https://orcid.org/0009-0004-5321-4608" target="_blank"
-                  >Dr. Nayak’s ORCID profile</a
-                >.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="brand-one award-certi"
-        id="publication-images"
-        style="margin-top: 0; padding-top: 30px"
-      >
-        <div class="container text-center">
-          <div class="section-title text-center">
-            <span class="section-title__tagline">Research Highlights</span>
-            <h2 class="section-title__title">Publication Covers</h2>
-          </div>
-
-          <!-- Centered Image -->
-          <div
-            style="
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 20px;
-            "
-            class="publication-images-wrapper"
-          >
-            <img
-              src="assets/images/academic/p-covers-1.jpeg"
-              alt="Publication Cover"
-              style="max-width: 320px; width: 100%; border-radius: 10px"
-            />
-            <img
-              src="assets/images/academic/p-covers-2.jpeg"
-              alt="Publication Cover"
-              style="max-width: 320px; width: 100%; border-radius: 10px"
-            />
-          </div>
-
-          <!-- PDF Button -->
-          <div style="margin-top: 20px">
-            <a
-              href="assets/pdf/nayak-2025-body-contouring.pdf"
-              target="_blank"
-              class="thm-btn"
-              style="padding: 12px 28px; display: inline-block"
-            >
-              View PDF
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== PUBLICATION IMAGES (SLIDER / GALLERY) ===================== -->
-      <section
-        class="brand-one award-certi"
-        id="publication-images"
-        style="margin-top: 0; padding-top: 30px; display: none"
-      >
-        <div class="container">
-          <div class="section-title text-center">
-            <span class="section-title__tagline">Research Highlights</span>
-            <h2 class="section-title__title">Publication Covers</h2>
-          </div>
-
-          <!-- Swiper slider reusing existing config and styles -->
-          <div
-            class="thm-swiper__slider swiper-container"
-            data-swiper-options='{
-        "spaceBetween": 100,
-        "slidesPerView": 5,
-        "loop": false,
-        "navigation": {
-          "nextEl": "#pub-gallery__swiper-button-next",
-          "prevEl": "#pub-gallery__swiper-button-prev"
-        },
-        "autoplay": { "delay": 5000 },
-        "breakpoints": {
-          "0":   { "spaceBetween": 30,  "slidesPerView": 2 },
-          "375": { "spaceBetween": 30,  "slidesPerView": 2 },
-          "575": { "spaceBetween": 30,  "slidesPerView": 3 },
-          "767": { "spaceBetween": 50,  "slidesPerView": 3 },
-          "991": { "spaceBetween": 50,  "slidesPerView": 3 },
-          "1199":{ "spaceBetween": 100, "slidesPerView": 3 }
-        }
-      }'
-          >
-            <div
-              class="swiper-wrapper"
-              style="display: flex; align-items: center"
-            >
-              <!-- Replace these images with actual journal cover screenshots / conference photos -->
-              <div class="swiper-slide">
-                <a
-                  href="assets/images/academic/p-covers-1.jpeg"
-                  class="img-popup"
+                <div
+                  class="orcid-badge"
+                  style="justify-content: center; margin-top: 30px"
                 >
                   <img
-                    src="assets/images/academic/p-covers-1.jpeg"
-                    alt="VASER Liposuction Publication"
+                    src="https://orcid.org/assets/vectors/orcid.logo.icon.svg"
+                    alt="ORCID"
                   />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a
-                  href="assets/images/academic/p-covers-2.jpeg"
-                  class="img-popup"
-                >
-                  <img
-                    src="assets/images/academic/p-covers-2.jpeg"
-                    alt="CO2 Laser Publication"
-                  />
-                </a>
-              </div>
-              <!-- <div class="swiper-slide">
-                <a
-                  href="assets/images/academics/pub-ijps-full.jpg"
-                  class="img-popup"
-                >
-                  <img
-                    src="assets/images/academics/pub-ijps-thumb.jpg"
-                    alt="IJPS Article"
-                  />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a
-                  href="assets/images/academics/pub-jpras-full.jpg"
-                  class="img-popup"
-                >
-                  <img
-                    src="assets/images/academics/pub-jpras-thumb.jpg"
-                    alt="JPRAS Article"
-                  />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a
-                  href="assets/images/academics/pub-conference-full.jpg"
-                  class="img-popup"
-                >
-                  <img
-                    src="assets/images/academics/pub-conference-thumb.jpg"
-                    alt="Conference Presentation"
-                  />
-                </a>
-              </div> -->
-            </div>
-          </div>
-
-          <!-- Optional next/prev buttons (match existing brand-one arrows if present) -->
-          <div class="brand-one__nav">
-            <div
-              class="swiper-button-next"
-              id="pub-gallery__swiper-button-next"
-              style="color: var(--mellis-black)"
-            ></div>
-            <div
-              class="swiper-button-prev"
-              id="pub-gallery__swiper-button-prev"
-              style="color: var(--mellis-black)"
-            ></div>
-          </div>
-        </div>
-      </section>
-      <section class="testimonial-one">
-        <div class="testimonial-one__bg-box">
-          <div
-            class="testimonial-one__bg"
-            style="
-              background-image: url(assets/images/backgrounds/testimonial-one-bg.jpg);
-            "
-          ></div>
-        </div>
-        <div class="container">
-          <div class="testimonial-one__top">
-            <div class="row">
-              <div class="col-xl-6 col-lg-6">
-                <div class="testimonial-one__left">
-                  <div class="section-title text-left">
-                    <span class="section-title__tagline"
-                      >Want to know more?</span
-                    >
-                    <h2 class="section-title__title">
-                      Book a Consultation on WhatsApp!
-                    </h2>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-6 col-lg-6">
-                <div class="testimonial-one__right">
-                  <p class="testimonial-one__text">
-                    Chat with us on WhatsApp or book a Consultation to explore
-                    how we can help you with your needs!
-                  </p>
-                  <div class="welcome-one__btn-box">
-                    <a
-                      href="https://wa.me/917990710731"
-                      class="welcome-one__btn thm-btn"
-                      style="
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                        max-width: max-content;
-                      "
-                      target="_blank"
-                      ><i
-                        class="fab fa-whatsapp"
-                        style="font-size: 24px; color: #fff"
-                      ></i
-                      >Chat Now!</a
-                    >
-                  </div>
+                  <a
+                    href="https://orcid.org/0009-0004-5321-4608"
+                    target="_blank"
+                    >View ORCID Profile</a
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <!--Testimonial One End-->
 
       <!--Site Footer Start-->
       <footer class="site-footer" id="footer">
@@ -1702,7 +2747,7 @@
                     <a href="mailto:info@luxorhospital.com"
                       >info@luxorhospital.com</a
                     >
-                    <a href="tel:+91 7990710731">+91 7990710731</a>
+                    <a href="tel:+917990710731">+91 7990710731</a>
                   </div>
                   <div class="welcome-one__btn-box">
                     <a
@@ -1715,12 +2760,13 @@
                         max-width: max-content;
                       "
                       target="_blank"
-                      ><i
+                    >
+                      <i
                         class="fas fa-map-marker-alt"
                         style="font-size: 24px; color: #fff"
                       ></i
-                      >Location</a
-                    >
+                      >Location
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1734,8 +2780,10 @@
                   </div>
                   <ul class="footer-widget__links-list list-unstyled">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="index.html#blogs">Blogs</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="academics.html">Academics</a></li>
                   </ul>
                 </div>
               </div>
@@ -1749,7 +2797,6 @@
                   </div>
                   <ul class="footer-widget__timing-list list-unstyled">
                     <li>Mon to Sat: 8 AM to 8 PM</li>
-                    <!-- <li>Tuesday to Friday: 8:00 to 19:00</li> -->
                     <li>Sunday: Closed</li>
                   </ul>
                 </div>
@@ -1777,10 +2824,9 @@
                     ></a>
                   </div>
                   <p>
-                    2nd Floor, Shyamal Sapphire <br />
-                    Building, Near Nilamber Circle, <br />
-                    Gotri Vasna Link Road, <br />
-                    Baroda, Gujarat - 391410
+                    2nd Floor, Shyamal Sapphire <br />Building, Near Nilamber
+                    Circle, <br />Gotri Vasna Link Road, <br />Baroda, Gujarat -
+                    391410
                   </p>
                 </div>
               </div>
@@ -1797,12 +2843,10 @@
                       href="https://diwizon.com/"
                       target="_blank"
                       style="color: var(--mellis-base)"
-                    >
-                      Diwizon</a
+                      >Diwizon</a
                     >
                   </p>
                   <ul class="list-unstyled site-footer__bottom-menu">
-                    <!-- <li><a href="#">Help</a></li> -->
                     <li>
                       <a href="privacy-policy.html" target="_blank"
                         >Privacy Policy</a
@@ -1819,9 +2863,9 @@
     </div>
     <!-- /.page-wrapper -->
 
+    <!-- Mobile Navigation -->
     <div class="mobile-nav__wrapper">
       <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-      <!-- /.mobile-nav__overlay -->
       <div class="mobile-nav__content">
         <span class="mobile-nav__close mobile-nav__toggler"
           ><i class="fa fa-times"></i
@@ -1829,12 +2873,10 @@
 
         <div class="logo-box">
           <a href="index.html" aria-label="logo image"
-            ><img src="assets/images/logo.png" width="90" alt=""
+            ><img src="assets/images/luxor_logo.png" width="90" alt=""
           /></a>
         </div>
-        <!-- /.logo-box -->
         <div class="mobile-nav__container"></div>
-        <!-- /.mobile-nav__container -->
 
         <ul class="mobile-nav__contact list-unstyled">
           <li>
@@ -1846,7 +2888,6 @@
             <a href="tel:+917990710731">+91 7990710731</a>
           </li>
         </ul>
-        <!-- /.mobile-nav__contact -->
         <div class="mobile-nav__top">
           <div class="mobile-nav__social">
             <a href="https://www.instagram.com/luxorhospital/" target="_blank"
@@ -1859,18 +2900,13 @@
               ><i class="fab fa-youtube"></i
             ></a>
           </div>
-          <!-- /.mobile-nav__social -->
         </div>
-        <!-- /.mobile-nav__top -->
       </div>
-      <!-- /.mobile-nav__content -->
     </div>
-    <!-- /.mobile-nav__wrapper -->
 
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"
+    <a href="#" data-target="html" class="scroll-to-top"
       ><i class="fa fa-angle-up"></i
     ></a>
-
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/jarallax/jarallax.min.js"></script>
@@ -1947,70 +2983,413 @@
         });
       });
     </script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
     <script>
-      // Get all list items with links in the category list
-      const categoryLinks = document.querySelectorAll(
-        ".services-details-two__category-list li a",
-      );
+      const firebaseConfig = {
+        apiKey: "AIzaSyDYCdGaVa45nfOwKLUrLv6DHqx-1CKi-Uw",
+        appId: "1:405925023047:web:fb25a11f8df211bf04d062",
+        messagingSenderId: "405925023047",
+        projectId: "luxor-d2976",
+        authDomain: "luxor-d2976.firebaseapp.com",
+        storageBucket: "luxor-d2976.firebasestorage.app",
+      };
 
-      // Get the current page URL
-      const currentURL = window.location.href;
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
 
-      // Loop through all links
-      categoryLinks.forEach((link) => {
-        // Check if the href of the link matches the current URL
-        if (currentURL.includes(link.getAttribute("href"))) {
-          // Add the 'active' class to the parent <li> element
-          link.parentElement.classList.add("active");
+      // Initialize Firestore
+      const db = firebase.firestore();
+
+      // Reference to Firestore collection
+      var ref = db.collection("Blogs").where("isFav", "==", true);
+      var list = document.getElementById("blogs-list");
+      var allBlogs = [];
+
+      // Fetch all blogs on page load
+      ref
+        .get()
+        .then((docsSnap) => {
+          console.log("Documents fetchedddd:", docsSnap.docs.length);
+          if (docsSnap.docs.length > 0) {
+            allBlogs = docsSnap.docs;
+            getBlogData(allBlogs); // Render the fetched blogs
+          } else {
+            console.error("No blogs found.");
+            list.innerHTML = "<p>No blogs available.</p>";
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching documents:", error);
+          list.innerHTML =
+            "<p>Error fetching blogs. Please try again later.</p>";
+        });
+
+      // Function to render blogs
+      function getBlogData(blogs) {
+        list.innerHTML = ""; // Clear the previous blog list
+
+        if (blogs.length > 0) {
+          blogs.forEach((doc) => {
+            const data = doc.data();
+            const date = new Date(data.createdAt)
+              .toDateString()
+              .split(" ")
+              .slice(1)
+              .join(" ");
+            list.innerHTML += `
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                            <a href="blog-details.html?title=${data.permalink}" class="blog-card__link">
+                    <div class="blog-one__single">
+                        <div class="blog-one__img aspect-ratio-16-9">
+                            
+                            <img src="${data.thumbnail}" alt="Blog">
+                        </div>
+                        <div class="blog-one__content">
+                            <h3 class="blog-one__title"><a href="blog-details.html?title=${data.permalink}">${data.metaTitle}</a></h3>
+                            <div class= "blog-card-bottom">
+                                <span class="blog-card__link__back"><span class="icon-duble-arrow"></span>Read More</span>
+                            <span class="blog-block__meta" id="blog-date">${date}</span>
+                            </div>
+                        </div>
+                            </a>
+                    </div>
+            `;
+          });
         } else {
-          // Remove 'active' class if it doesn't match
-          link.parentElement.classList.remove("active");
+          list.innerHTML = "<p>No blogs match your search.</p>";
         }
+      }
+
+      // Event listener for search input field
+      (document
+        .getElementById("searchInput")
+        ?.addEventListener("input", function (event) {
+          var keyword = event.target.value.trim().toLowerCase(); // Get the entered search keyword
+
+          if (keyword) {
+            console.log("Search keyword:", keyword);
+
+            // Filter blogs based on the keyword
+            var filteredBlogs = allBlogs.filter((doc) => {
+              const data = doc.data();
+              const metaTitle = data.metaTitle
+                ? data.metaTitle.toLowerCase()
+                : "";
+              const lowerTitle = data.lowerTitle
+                ? data.lowerTitle.toLowerCase()
+                : "";
+
+              return (
+                metaTitle.includes(keyword) || lowerTitle.includes(keyword)
+              );
+            });
+
+            console.log("Filtered blogs:", filteredBlogs.length);
+            getData(filteredBlogs); // Render the filtered blogs
+          } else {
+            console.log("No keyword entered, displaying all blogs.");
+            getData(allBlogs); // If no keyword, render all blogs
+          }
+        }),
+        // Show all blogs initially
+        document.addEventListener("DOMContentLoaded", function () {
+          getData(allBlogs);
+        }));
+    </script>
+
+    <script>
+      // const firebaseConfig = {
+      //     apiKey: 'AIzaSyDYCdGaVa45nfOwKLUrLv6DHqx-1CKi-Uw',
+      //     appId: '1:405925023047:web:fb25a11f8df211bf04d062',
+      //     messagingSenderId: '405925023047',
+      //     projectId: 'luxor-d2976',
+      //     authDomain: 'luxor-d2976.firebaseapp.com',
+      //     storageBucket: 'luxor-d2976.firebasestorage.app',
+      // };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Initialize Firestore
+      // const db = firebase.firestore();
+
+      // Reference to Firestore collection
+      var galleryref = db.collection("gallery").where("isFav", "==", true);
+      var videolist = document.getElementById("video-list");
+      var gallerylist = document.getElementById("gallery-list");
+      var allgallery = [];
+
+      // Fetch all blogs on page load
+      galleryref
+        .get()
+        .then((docsSnap) => {
+          console.log("Documents fetched:", docsSnap.docs.length);
+          if (docsSnap.docs.length > 0) {
+            allgallery = docsSnap.docs;
+            allGallery = Array.isArray(docsSnap.docs.map((doc) => doc.data()));
+            console.log("Type of allGallery:", typeof allGallery); // Should log 'object' (because an array is a type of object)
+            console.log("Is it an array?", Array.isArray(allGallery)); // Logs true if it's an array
+            console.log("Gallery Items:", allGallery);
+            getData(allgallery.filter((e) => e.data().hasImage)); // Render the fetched blogs
+            getVideoData(allgallery.filter((e) => !e.data().hasImage)); // Render the fetched blogs
+          } else {
+            console.error("No blogs found.");
+            gallerylist.innerHTML = "<p>No blogs available.</p>";
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching documents:", error);
+          gallerylist.innerHTML =
+            "<p>Error fetching blogs. Please try again later.</p>";
+        });
+
+      // Function to render blogs
+      function getVideoData(blogs) {
+        videolist.innerHTML = ""; // Clear the previous blog list
+
+        if (blogs.length > 0) {
+          blogs.forEach((doc) => {
+            const data = doc.data();
+            // console.log(data);
+            const date = new Date(data.createdAt)
+              .toDateString()
+              .split(" ")
+              .slice(1)
+              .join(" ");
+
+            videolist.innerHTML += `
+        <div class="col-lg-4 col-md-6">
+                    <div class="gallery-page__single">
+                        <div class="gallery-page__img-wrapper no-hover">
+                            <!-- Video with background image as poster -->
+                            <iframe class="gallery-page__video" width="100%" height="100%"
+                                src="${data.imageUrl}" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+    `;
+          });
+        } else {
+          videolist.innerHTML = "<p>No blogs match your search.</p>";
+        }
+      }
+
+      function getData(blogs) {
+        gallerylist.innerHTML = ""; // Clear the previous blog list
+
+        if (blogs.length > 0) {
+          blogs.forEach((doc) => {
+            const data = doc.data();
+            console.log(data);
+            const date = new Date(data.createdAt)
+              .toDateString()
+              .split(" ")
+              .slice(1)
+              .join(" ");
+
+            gallerylist.innerHTML += `
+            <div class="col-lg-4 col-md-6">
+                    <div class="gallery-page__single">
+                        <div class="gallery-page__img-wrapper">
+                            <img src="${data.imageUrl}" alt="">
+                            <div class="gallery-page__icon">
+                                <a class="img-popup" href="${data.imageUrl}" alt="">
+                                    <span class="fa fa-plus"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="image-name">${data.title}</span>
+                    </div>
+                </div>
+
+        `;
+          });
+        } else {
+          gallerylist.innerHTML = "<p>No blogs match your search.</p>";
+        }
+      }
+
+      // Event listener for search input field
+      document
+        .getElementById("searchInput")
+        ?.addEventListener("input", function (event) {
+          var keyword = event.target.value.trim().toLowerCase(); // Get the entered search keyword
+
+          if (keyword) {
+            console.log("Search keyword:", keyword);
+
+            // Filter blogs based on the keyword
+            var filteredBlogs = allBlogs.filter((doc) => {
+              const data = doc.data();
+              const metaTitle = data.metaTitle
+                ? data.metaTitle.toLowerCase()
+                : "";
+              const lowerTitle = data.lowerTitle
+                ? data.lowerTitle.toLowerCase()
+                : "";
+
+              return (
+                metaTitle.includes(keyword) || lowerTitle.includes(keyword)
+              );
+            });
+
+            console.log("Filtered blogs:", filteredBlogs.length);
+            getData(filteredBlogs); // Render the filtered blogs
+          } else {
+            console.log("No keyword entered, displaying all blogs.");
+            getData(allBlogs); // If no keyword, render all blogs
+          }
+        });
+
+      // Show all blogs initially
+      document.addEventListener("DOMContentLoaded", function () {
+        getData(allBlogs);
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("image-modal");
+        const modalImage = document.getElementById("modal-image");
+        const closeModal = document.querySelector(".image-modal-close");
+
+        // Ensure modal is hidden on page load
+        modal.style.display = "none";
+
+        // Open modal when an image link is clicked
+        document.addEventListener("click", (e) => {
+          const link = e.target.closest(".img-popup"); // Check if the clicked target has the img-popup class
+          if (link) {
+            e.preventDefault(); // Prevent default link behavior
+            const imageUrl = link.getAttribute("href"); // Get the image URL
+            if (imageUrl) {
+              modalImage.src = imageUrl; // Set the modal image source
+              modal.style.display = "flex"; // Show the modal
+              document.body.classList.add("modal-open"); // Add class to hide scrollbar
+            }
+          }
+        });
+
+        // Close modal when the close button is clicked
+        closeModal.addEventListener("click", () => {
+          modal.style.display = "none"; // Hide the modal
+          modalImage.src = ""; // Clear the image source
+          document.body.classList.remove("modal-open"); // Remove class to show scrollbar
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.style.display = "none"; // Hide the modal
+            modalImage.src = ""; // Clear the image source
+            document.body.classList.remove("modal-open"); // Remove class to show scrollbar
+          }
+        });
+      });
+    </script>
+    <script>
+      function navigateToGallery(event) {
+        event.preventDefault(); // Prevent default anchor action
+        const targetUrl = "index.html#gallery";
+
+        // Custom logic: Close mobile navigation
+        if (
+          document
+            .querySelector(".mobile-nav__wrapper")
+            .classList.contains("expanded")
+        ) {
+          document
+            .querySelector(".mobile-nav__wrapper")
+            .classList.toggle("expanded");
+          document.body.classList.toggle("locked");
+        }
+
+        // Navigate to the target URL
+        window.location.href = targetUrl;
+      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const discoverModal = document.getElementById("discover-modal");
+        const openModalBtn = document.getElementById("open-discover-modal");
+        const closeModalBtn = document.querySelector(".discovermodal-close");
+        const stickyHeader = document.querySelector(".stricky-header"); // Target the sticky header
+
+        // Open Modal
+        openModalBtn.addEventListener("click", (e) => {
+          e.preventDefault(); // Prevent default link behavior
+          discoverModal.style.display = "flex"; // Show modal
+          document.body.classList.add("modal-open"); // Optional: Prevent background scrolling
+
+          // Adjust sticky-header z-index to 1 when modal opens
+          if (stickyHeader) {
+            stickyHeader.style.zIndex = "-1";
+          }
+        });
+
+        // Close Modal on Close Button Click
+        closeModalBtn.addEventListener("click", () => {
+          discoverModal.style.display = "none"; // Hide modal
+          document.body.classList.remove("modal-open"); // Allow background scrolling
+
+          // Reset sticky-header z-index to 991 when modal closes
+          if (stickyHeader) {
+            stickyHeader.style.zIndex = "991";
+          }
+        });
+
+        // Close Modal on Clicking Outside the Modal Content
+        discoverModal.addEventListener("click", (e) => {
+          if (e.target === discoverModal) {
+            discoverModal.style.display = "none"; // Hide modal
+            document.body.classList.remove("modal-open"); // Allow background scrolling
+
+            // Reset sticky-header z-index to 991
+            if (stickyHeader) {
+              stickyHeader.style.zIndex = "991";
+            }
+          }
+        });
       });
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const modal = document.getElementById("image-modal");
-        const modalImage = document.getElementById("full-image");
-        const closeBtn = document.querySelector(".close");
-        const images = document.querySelectorAll(".clickable-image");
-        const navigation = document.querySelector(".stricky-header"); // Target the navigation
+        const teamModal = document.getElementById("team-modal"); // Modal container
+        const openModalBtn = document.getElementById("open-team-modal"); // Button to open the modal
+        const closeModalBtn = document.querySelector(".temodal-close"); // Close button inside the modal
 
-        // Function to set navigation z-index
-        function setNavigationZIndex(value) {
-          if (navigation) {
-            navigation.style.zIndex = value;
-          }
-        }
+        // Ensure modal starts hidden
+        teamModal.style.display = "none";
 
-        // Open Modal and Set Image
-        images.forEach((image) => {
-          image.addEventListener("click", () => {
-            modal.style.display = "block";
-            modalImage.src = image.src;
-            document.body.classList.add("modal-open"); // Disable background scroll
-            setNavigationZIndex("0"); // Set navigation z-index to 0
-          });
+        // Open Modal on Button Click
+        openModalBtn.addEventListener("click", (e) => {
+          e.preventDefault(); // Prevent default link behavior
+          teamModal.style.display = "flex"; // Show the modal
+          document.body.classList.add("modal-open"); // Disable background scroll
         });
 
-        // Close Modal
-        closeBtn.addEventListener("click", () => {
-          modal.style.display = "none";
+        // Close Modal on Close Button Click
+        closeModalBtn.addEventListener("click", () => {
+          teamModal.style.display = "none"; // Hide the modal
           document.body.classList.remove("modal-open"); // Enable background scroll
-          setNavigationZIndex("991"); // Reset navigation z-index
         });
 
-        // Close Modal on Outside Click
-        modal.addEventListener("click", (e) => {
-          if (e.target === modal) {
-            modal.style.display = "none";
+        // Close Modal on Clicking Outside Modal Content
+        teamModal.addEventListener("click", (e) => {
+          if (e.target === teamModal) {
+            teamModal.style.display = "none"; // Hide the modal
             document.body.classList.remove("modal-open"); // Enable background scroll
-            setNavigationZIndex("991"); // Reset navigation z-index
           }
         });
       });
     </script>
   </body>
-
-  <!-- Mirrored from mellis-html.vercel.app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2024 06:05:32 GMT -->
 </html>
