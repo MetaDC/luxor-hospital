@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <!-- Mirrored from mellis-html.vercel.app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2024 06:04:52 GMT -->
   <!-- Added by HTTrack -->
@@ -155,9 +155,7 @@
         visibility: visible;
         transform: translateX(-50%) scale(1);
         /* Ensure it scales in place */
-        transition:
-          opacity 300ms ease,
-          transform 300ms ease;
+        transition: opacity 300ms ease, transform 300ms ease;
       }
 
       .dropdown-menus-1 {
@@ -1200,7 +1198,7 @@
                     <a href="blog.html">Blogs</a>
                   </li>
                   <li>
-                    <a href="academic.html">Academics</a>
+                    <a href="#">Academics</a>
                   </li>
                 </ul>
               </div>
@@ -2475,14 +2473,7 @@
                     height="100%"
                     src="https://www.youtube.com/embed/AcNSXzUq2sY?si=dWlNfg1CXM0Un-ED"
                     frameborder="0"
-                    allow="
-                      accelerometer;
-                      autoplay;
-                      clipboard-write;
-                      encrypted-media;
-                      gyroscope;
-                      picture-in-picture;
-                    "
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   >
                   </iframe>
@@ -2499,14 +2490,7 @@
                     height="100%"
                     src="https://youtube.com/embed/qa_oD7Yj8-4?si=5XYHgF3wYAM6wPkD"
                     frameborder="0"
-                    allow="
-                      accelerometer;
-                      autoplay;
-                      clipboard-write;
-                      encrypted-media;
-                      gyroscope;
-                      picture-in-picture;
-                    "
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   >
                   </iframe>
@@ -2523,14 +2507,7 @@
                     height="100%"
                     src="https://www.youtube.com/embed/TAgRhEFvYy4?si=LHLWB9s1vRqd9-2O"
                     frameborder="0"
-                    allow="
-                      accelerometer;
-                      autoplay;
-                      clipboard-write;
-                      encrypted-media;
-                      gyroscope;
-                      picture-in-picture;
-                    "
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   >
                   </iframe>
@@ -3447,7 +3424,7 @@
           // Get the trigger and associated menu
           const trigger = dropdown.querySelector("a");
           const menu = dropdown.querySelector(
-            ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2",
+            ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
           );
 
           // Toggle dropdown on click
@@ -3457,7 +3434,7 @@
             // Close all other dropdowns
             dropdowns.forEach((otherDropdown) => {
               const otherMenu = otherDropdown.querySelector(
-                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2",
+                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
               );
               if (otherMenu !== menu) {
                 otherMenu.style.display = "none";
@@ -3475,7 +3452,7 @@
           if (!e.target.closest(".mega-dropdown")) {
             dropdowns.forEach((dropdown) => {
               const menu = dropdown.querySelector(
-                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2",
+                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
               );
               menu.style.display = "none";
             });

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <!-- Mirrored from mellis-html.vercel.app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2024 06:04:52 GMT -->
   <!-- Added by HTTrack -->
@@ -151,9 +151,7 @@
         visibility: visible;
         transform: translateX(-50%) scale(1);
         /* Ensure it scales in place */
-        transition:
-          opacity 300ms ease,
-          transform 300ms ease;
+        transition: opacity 300ms ease, transform 300ms ease;
       }
 
       .dropdown-menus-1 {
@@ -1094,7 +1092,7 @@
                     <a href="blog.html">Blogs</a>
                   </li>
                   <li>
-                    <a href="academic.html">Academics</a>
+                    <a href="#">Academics</a>
                   </li>
                 </ul>
               </div>
@@ -1718,7 +1716,7 @@
           // Get the trigger and associated menu
           const trigger = dropdown.querySelector("a");
           const menu = dropdown.querySelector(
-            ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2",
+            ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
           );
 
           // Toggle dropdown on click
@@ -1728,7 +1726,7 @@
             // Close all other dropdowns
             dropdowns.forEach((otherDropdown) => {
               const otherMenu = otherDropdown.querySelector(
-                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2",
+                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
               );
               if (otherMenu !== menu) {
                 otherMenu.style.display = "none";
@@ -1746,7 +1744,7 @@
           if (!e.target.closest(".mega-dropdown")) {
             dropdowns.forEach((dropdown) => {
               const menu = dropdown.querySelector(
-                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2",
+                ".dropdown-menus, .dropdown-menus-1, .dropdown-menus-2"
               );
               menu.style.display = "none";
             });
@@ -1757,7 +1755,7 @@
     <script>
       // Get all list items with links in the category list
       const categoryLinks = document.querySelectorAll(
-        ".services-details-two__category-list li a",
+        ".services-details-two__category-list li a"
       );
 
       // Get the current page URL
