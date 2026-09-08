@@ -205,15 +205,10 @@ def parse_all_blogs_from_md(md_path):
             first_line = body_lines[0].strip()
             if not first_line:
                 break
-            if (len(first_line) <= 50 and 
-                not first_line.endswith('.') and 
-                not first_line.endswith('!') and
-                not first_line.startswith('●') and
-                not re.match(r'^\d+\.', first_line)):
-                title_lines.append(first_line)
-                body_lines.pop(0)
-            else:
+            if first_line.lower() == 'introduction':
                 break
+            title_lines.append(first_line)
+            body_lines.pop(0)
                 
         blog['title'] = " ".join(title_lines).replace("–", "-").strip()
         blog['title'] = re.sub(r'\s+', ' ', blog['title'])
@@ -228,7 +223,8 @@ def parse_all_blogs_from_md(md_path):
 
 def main():
     parser = argparse.ArgumentParser(description="Luxor Hospital Blog Automator")
-    parser.add_argument('--source', default='all.md', help='Source markdown file')
+    default_source = 'blogs.md' if os.path.exists('blogs.md') else 'all.md'
+    parser.add_argument('--source', default=default_source, help='Source markdown file')
     parser.add_argument('--template', default='blogs/dry-eye-syndrome-causes-treatment-when-to-see-an-eye-specialist.html', help='Template HTML page')
     parser.add_argument('--month', help='Target month name (e.g. July)')
     parser.add_argument('--year', type=int, help='Target year (e.g. 2026)')
@@ -516,11 +512,12 @@ def main():
             f.write(blog['slug'] + '\n')
             
     # 11. Append to blogs.md
-    blogs_md_path = 'blogs.md'
-    print("Appending to blogs.md...")
-    with open(blogs_md_path, 'a', encoding='utf-8') as f:
-        for part in markdown_append_parts:
-            f.write(part)
+    if args.source != 'blogs.md':
+        blogs_md_path = 'blogs.md'
+        print("Appending to blogs.md...")
+        with open(blogs_md_path, 'a', encoding='utf-8') as f:
+            for part in markdown_append_parts:
+                f.write(part)
             
     print("\nSuccessfully added all new blogs!")
 
