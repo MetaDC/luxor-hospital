@@ -781,6 +781,483 @@
           -4px 0px 10px rgba(0, 0, 0, 0.5);
         /* Four sides shadow */
       }
+
+      /*--------------------------------------------------------------
+      # Luxor 9-Year Anniversary Celebration Section (The Luxor Edit)
+      --------------------------------------------------------------*/
+      .luxor-anniversary-wrap {
+        position: relative;
+        /* background: radial-gradient(circle at 10% 15%, rgba(214, 182, 123, 0.16) 0%, transparent 45%),
+                    radial-gradient(circle at 90% 85%, rgba(214, 182, 123, 0.14) 0%, transparent 45%),
+                    linear-gradient(180deg, #fdfbf7 0%, #f7f2e7 50%, #f0e7d7 100%); */
+        padding: 90px 0 95px;
+        overflow: hidden;
+        border-top: 1px solid rgba(214, 182, 123, 0.3);
+        /* border-bottom: 1px solid rgba(214, 182, 123, 0.3); */
+      }
+
+      .luxor-celebration-canvas {
+        background: #ffffff;
+        border-radius: 28px;
+        border: 1px solid rgba(214, 182, 123, 0.45);
+        box-shadow:
+          0 25px 60px rgba(39, 37, 42, 0.08),
+          0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Editorial Panel (Left side) */
+      .luxor-editorial-panel {
+        padding: 50px 42px 45px;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(214, 182, 123, 0.16),
+            transparent 60%
+          ),
+          radial-gradient(
+            circle at bottom left,
+            rgba(214, 182, 123, 0.12),
+            transparent 50%
+          ),
+          linear-gradient(160deg, #ffffff 0%, #fcf9f4 55%, #f6f0e4 100%);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        border-right: 1px solid rgba(214, 182, 123, 0.28);
+      }
+
+      .luxor-botanical-corner-tl {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 140px;
+        height: 140px;
+        pointer-events: none;
+        opacity: 0.85;
+      }
+
+      .luxor-botanical-corner-bl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 130px;
+        height: 130px;
+        pointer-events: none;
+        opacity: 0.85;
+      }
+
+      .luxor-brand-badge {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 24px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .luxor-brand-badge__emblem {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 6px;
+      }
+
+      .luxor-brand-badge__text {
+        font-family: var(--mellis-font-two);
+        font-size: 15px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #27252a;
+        font-weight: 700;
+      }
+
+      .luxor-hero-number-wrap {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 8px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .luxor-giant-nine {
+        font-family: var(--mellis-font-two);
+        font-size: clamp(74px, 7vw, 98px);
+        font-weight: 700;
+        line-height: 0.88;
+        background: linear-gradient(
+          135deg,
+          #d4a959 0%,
+          #ad802c 50%,
+          #7d5918 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        filter: drop-shadow(0 4px 10px rgba(214, 182, 123, 0.3));
+      }
+
+      .luxor-years-title-block {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .luxor-years-word {
+        font-family: var(--mellis-font-two);
+        font-size: clamp(28px, 3.2vw, 42px);
+        font-weight: 700;
+        color: #27252a;
+        line-height: 1;
+        letter-spacing: -0.5px;
+      }
+
+      .luxor-sub-headline {
+        font-family: var(--mellis-font);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #646069;
+        margin-top: 4px;
+        line-height: 1.4;
+      }
+
+      .luxor-story-paragraph {
+        font-family: var(--mellis-font);
+        font-size: 14.5px;
+        line-height: 1.75;
+        color: #4f4b55;
+        text-align: center;
+        margin: 18px 0 10px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .luxor-script-thankyou {
+        font-family: var(--mellis-font-three), "Parisienne", cursive;
+        font-size: clamp(48px, 5vw, 68px);
+        line-height: 1.1;
+        color: #a8813c;
+        text-align: center;
+        margin: 6px 0 2px;
+        position: relative;
+        z-index: 2;
+        filter: drop-shadow(0 2px 4px rgba(214, 182, 123, 0.25));
+      }
+
+      .luxor-sprig-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 14px 0 12px;
+        color: #c5a059;
+        font-size: 16px;
+      }
+
+      .luxor-sprig-divider::before,
+      .luxor-sprig-divider::after {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(214, 182, 123, 0.6),
+          transparent
+        );
+      }
+
+      .luxor-quote-toast {
+        font-family: var(--mellis-font-two);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #27252a;
+        text-align: center;
+        line-height: 1.6;
+        margin-bottom: 16px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .luxor-signature-block {
+        text-align: center;
+        margin-top: 10px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .luxor-sig-hospital {
+        font-family: var(--mellis-font-two);
+        font-size: 16px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #27252a;
+      }
+
+      .luxor-sig-years {
+        font-family: var(--mellis-font);
+        font-size: 12px;
+        letter-spacing: 0.25em;
+        color: #8c7647;
+        font-weight: 600;
+        margin-top: 3px;
+      }
+
+      .luxor-panel-tags {
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .luxor-panel-chips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .luxor-chip-item {
+        font-size: 11px;
+        font-weight: 600;
+        color: #55515c;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(214, 182, 123, 0.4);
+        border-radius: 20px;
+        padding: 4px 12px;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+      }
+
+      .luxor-panel-hashtags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .luxor-hash-item {
+        font-size: 11px;
+        font-weight: 600;
+        color: #a8813c;
+      }
+
+      /* ==============================================================
+         5-Photo Uneven Modern Mosaic (Right Side)
+      ============================================================== */
+      .luxor-photo-collage {
+        padding: 24px;
+        background: #fdfbf8;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+        justify-content: center;
+      }
+
+      .luxor-collage-row-top {
+        display: flex;
+        gap: 20px;
+        height: 380px;
+      }
+
+      .luxor-collage-row-bottom {
+        display: flex;
+        gap: 20px;
+        height: 320px;
+      }
+
+      .luxor-card-wrap {
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(214, 182, 123, 0.45);
+        box-shadow: 0 10px 24px rgba(39, 37, 42, 0.07);
+        background: #19181c;
+        transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .luxor-card-wrap:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 42px rgba(214, 182, 123, 0.3);
+        border-color: #d6b67b;
+      }
+
+      .luxor-card--2 {
+        flex: 0 0 calc(58% - 10px);
+      }
+      .luxor-card--1 {
+        flex: 0 0 calc(42% - 10px);
+      }
+
+      .luxor-card--5 {
+        flex: 0 0 calc(38% - 13.3px);
+      }
+      .luxor-card--4 {
+        flex: 0 0 calc(28% - 13.3px);
+      }
+      .luxor-card--3 {
+        flex: 0 0 calc(34% - 13.3px);
+      }
+
+      .luxor-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
+        display: block;
+      }
+
+      .luxor-card-wrap:hover .luxor-card-img {
+        transform: scale(1.06);
+      }
+
+      .luxor-card-badge-top {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: rgba(25, 24, 28, 0.8);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        color: #f7e6c4;
+        border: 1px solid rgba(214, 182, 123, 0.45);
+        border-radius: 20px;
+        padding: 5px 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        z-index: 3;
+        pointer-events: none;
+      }
+
+      .luxor-card-zoom-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(214, 182, 123, 0.95);
+        color: #1a171c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        opacity: 0;
+        z-index: 4;
+        transition: all 0.35s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      }
+
+      .luxor-card-wrap:hover .luxor-card-zoom-btn {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .luxor-card-zoom-btn:hover {
+        background: #ffffff;
+        color: #a8813c;
+        transform: translate(-50%, -50%) scale(1.12);
+      }
+
+      .luxor-card-gradient-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 24px 16px 14px;
+        background: linear-gradient(
+          180deg,
+          transparent 0%,
+          rgba(18, 17, 21, 0.75) 50%,
+          rgba(14, 13, 17, 0.95) 100%
+        );
+        z-index: 3;
+        pointer-events: none;
+      }
+
+      .luxor-card-caption-title {
+        font-family: var(--mellis-font-two);
+        font-size: 14.5px;
+        color: #ffffff;
+        font-weight: 600;
+        margin: 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+      }
+
+      .luxor-card-caption-sub {
+        font-size: 11.5px;
+        color: #e5d7c3;
+        margin: 2px 0 0 0;
+      }
+
+      /* Responsive Rules */
+      @media (max-width: 1199px) {
+        .luxor-editorial-panel {
+          border-right: none;
+          border-bottom: 1px solid rgba(214, 182, 123, 0.3);
+          padding: 45px 30px 40px;
+        }
+        .luxor-collage-row-top {
+          height: 330px;
+        }
+        .luxor-collage-row-bottom {
+          height: 280px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .luxor-anniversary-wrap {
+          padding: 60px 0 65px;
+        }
+        .luxor-editorial-panel {
+          padding: 40px 20px 35px;
+        }
+        .luxor-photo-collage {
+          padding: 16px;
+          gap: 14px;
+        }
+        .luxor-collage-row-top {
+          flex-direction: column;
+          height: auto;
+          gap: 14px;
+        }
+        .luxor-card--2,
+        .luxor-card--1 {
+          flex: 1 1 auto;
+          height: 260px;
+        }
+        .luxor-collage-row-bottom {
+          flex-direction: column;
+          height: auto;
+          gap: 14px;
+        }
+        .luxor-card--5,
+        .luxor-card--4,
+        .luxor-card--3 {
+          flex: 1 1 auto;
+          height: 230px;
+        }
+        .luxor-giant-nine {
+          font-size: 64px;
+        }
+        .luxor-years-word {
+          font-size: 26px;
+        }
+      }
     </style>
   </head>
 
@@ -2748,6 +3225,358 @@
         </div>
       </section>
       <!--Brand One End-->
+
+      <!-- ============================================================== -->
+      <!-- Luxor 9-Year Anniversary Celebration Section                   -->
+      <!-- ============================================================== -->
+      <section class="luxor-anniversary-wrap" id="anniversary-celebration">
+        <div class="container-fluid" style="max-width: 1440px; padding: 0 24px">
+          <div class="luxor-celebration-canvas">
+            <div class="row g-0 align-items-stretch">
+              <!-- Left Column: Editorial Celebration Card -->
+              <div class="col-xl-4 col-lg-5 col-md-12">
+                <div class="luxor-editorial-panel">
+                  <!-- Decorative Botanical Corners -->
+                  <div class="luxor-botanical-corner-tl" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 140 140"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="width: 100%; height: 100%"
+                    >
+                      <path
+                        d="M-10 10 Q 50 30 90 90 Q 110 120 130 150"
+                        stroke="#c5a059"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        opacity="0.45"
+                      />
+                      <path
+                        d="M15 22 C 8 35 24 45 32 30 C 35 25 25 18 15 22 Z"
+                        fill="#d6b67b"
+                        opacity="0.3"
+                      />
+                      <path
+                        d="M38 38 C 30 52 50 60 58 46 C 62 40 50 32 38 38 Z"
+                        fill="#bfa063"
+                        opacity="0.25"
+                      />
+                      <path
+                        d="M62 60 C 56 75 78 82 85 68 C 88 62 75 54 62 60 Z"
+                        fill="#d6b67b"
+                        opacity="0.3"
+                      />
+                      <circle
+                        cx="28"
+                        cy="18"
+                        r="4"
+                        fill="#ad802c"
+                        opacity="0.4"
+                      />
+                      <circle
+                        cx="50"
+                        cy="32"
+                        r="3.5"
+                        fill="#c5a059"
+                        opacity="0.4"
+                      />
+                      <circle
+                        cx="75"
+                        cy="52"
+                        r="4"
+                        fill="#ad802c"
+                        opacity="0.4"
+                      />
+                    </svg>
+                  </div>
+                  <div class="luxor-botanical-corner-bl" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 130 130"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="width: 100%; height: 100%"
+                    >
+                      <path
+                        d="M-10 120 Q 40 100 80 40 Q 100 10 120 -20"
+                        stroke="#c5a059"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        opacity="0.45"
+                      />
+                      <path
+                        d="M18 105 C 10 92 26 82 34 97 C 37 102 27 109 18 105 Z"
+                        fill="#d6b67b"
+                        opacity="0.3"
+                      />
+                      <path
+                        d="M42 85 C 34 71 54 63 62 77 C 65 83 53 91 42 85 Z"
+                        fill="#bfa063"
+                        opacity="0.25"
+                      />
+                      <circle
+                        cx="32"
+                        cy="110"
+                        r="3.5"
+                        fill="#ad802c"
+                        opacity="0.4"
+                      />
+                      <circle
+                        cx="55"
+                        cy="90"
+                        r="4"
+                        fill="#c5a059"
+                        opacity="0.4"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Editorial Header / Badge -->
+                  <!-- <div class="luxor-brand-badge">
+                    <svg viewBox="0 0 100 120" class="luxor-brand-badge__emblem" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 8C50 8 30 36 30 65C30 84 41 103 50 112C59 103 70 84 70 65C70 36 50 8 50 8Z" stroke="#ad802c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="rgba(214, 182, 123, 0.12)"/>
+                      <path d="M51 38C47 43 45 49 46 54C47 57 49 59 52 60C55 61 58 63 58 67C58 72 54 75 50 78" stroke="#ad802c" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M44 48C45 46 47 45 50 45" stroke="#ad802c" stroke-width="1.8" stroke-linecap="round"/>
+                      <path d="M49 64C47 67 46 69 46 72C46 77 49 81 54 83C58 84 63 82 64 76C65 70 61 64 56 62" stroke="#ad802c" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <span class="luxor-brand-badge__text">The Luxor Edit</span>
+                  </div> -->
+
+                  <!-- Giant 9 Years Headline -->
+                  <div class="luxor-hero-number-wrap">
+                    <span class="luxor-giant-nine">9</span>
+                    <div class="luxor-years-title-block">
+                      <span class="luxor-years-word">Years</span>
+                      <span class="luxor-sub-headline"
+                        >Of Beauty, Transformation &amp; Brighter
+                        Tomorrows</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Narrative Story -->
+                  <p class="luxor-story-paragraph">
+                    From the first patient to the thousandth smile, this journey
+                    has been built on trust &mdash; and celebrated with the
+                    people who made it possible.
+                  </p>
+
+                  <!-- Script Thank You -->
+                  <div class="luxor-script-thankyou">Thank You</div>
+
+                  <p class="luxor-story-paragraph" style="margin-top: 2px">
+                    for being part of our story, and here's to stepping into
+                    year 10 with even more to be proud of.
+                  </p>
+
+                  <!-- Golden Sprig Divider -->
+                  <div class="luxor-sprig-divider">
+                    <i class="fas fa-seedling"></i>
+                  </div>
+
+                  <!-- Toast Motto -->
+                  <div class="luxor-quote-toast">
+                    Here's to beauty, confidence, and everything still ahead.
+                  </div>
+
+                  <!-- Signature -->
+                  <div class="luxor-signature-block">
+                    <div class="luxor-sig-hospital">LUXOR HOSPITAL</div>
+                    <div class="luxor-sig-years">
+                      2017 &nbsp;&mdash;&nbsp; 2026
+                    </div>
+                  </div>
+
+                  <!-- Milestone Meta Tags & Hashtags -->
+                  <div class="luxor-panel-tags">
+                    <div class="luxor-panel-chips">
+                      <span class="luxor-chip-item"
+                        >Luxor Hospital anniversary</span
+                      >
+                      <span class="luxor-chip-item"
+                        >Cosmetic surgery Vadodara</span
+                      >
+                      <span class="luxor-chip-item"
+                        >Aesthetic clinic milestone</span
+                      >
+                      <span class="luxor-chip-item">The Luxor Edit</span>
+                      <span class="luxor-chip-item"
+                        >Plastic surgery hospital</span
+                      >
+                    </div>
+                    <div class="luxor-panel-hashtags">
+                      <span class="luxor-hash-item">#cosmeticsurgery</span>
+                      <span class="luxor-hash-item">#aestheticmedicine</span>
+                      <span class="luxor-hash-item">#plasticsurgery</span>
+                      <span class="luxor-hash-item">#beautytransformation</span>
+                      <span class="luxor-hash-item">#medicalaesthetics</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: 5-Photo Uneven Modern Mosaic Gallery -->
+              <div class="col-xl-8 col-lg-7 col-md-12">
+                <div class="luxor-photo-collage">
+                  <!-- Top Row: 2 Photos (Founders at 9 Years Banner 58% + Welcome Easel 42%) -->
+                  <div class="luxor-collage-row-top">
+                    <!-- Photo 2: Founders at Banner (58%) -->
+                    <div class="luxor-card-wrap luxor-card--2">
+                      <img
+                        src="assets/images/celebration/2.webp"
+                        alt="9 Years Celebration - Dr. Saumya Nayak & Dr. Suhani Nayak"
+                        class="luxor-card-img"
+                        loading="lazy"
+                      />
+                      <span class="luxor-card-badge-top">
+                        <i class="fas fa-crown"></i> 9 Years Milestone
+                      </span>
+                      <!-- <a
+                        href="assets/images/celebration/2.webp"
+                        class="img-popup luxor-card-zoom-btn"
+                        data-group="9"
+                        title="9 Years Celebration - Dr. Saumya Nayak & Dr. Suhani Nayak"
+                        aria-label="View photo in high resolution"
+                      >
+                        <i class="fas fa-search-plus"></i>
+                      </a> -->
+                      <div class="luxor-card-gradient-bar">
+                        <h4 class="luxor-card-caption-title">
+                          Dr. Saumya &amp; Dr. Suhani Nayak
+                        </h4>
+                        <p class="luxor-card-caption-sub">
+                          Leading Luxor Hospital into a Decade of Excellence
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Photo 1: Floral Welcome Easel Board (42%) -->
+                    <div class="luxor-card-wrap luxor-card--1">
+                      <img
+                        src="assets/images/celebration/1.webp"
+                        alt="Welcomes You - Celebrating 9 Years of Beauty & Aesthetics"
+                        class="luxor-card-img"
+                        loading="lazy"
+                      />
+                      <span class="luxor-card-badge-top">
+                        <i class="fas fa-star"></i> Welcoming Year 10
+                      </span>
+                      <!-- <a
+                        href="assets/images/celebration/1.webp"
+                        class="img-popup luxor-card-zoom-btn"
+                        data-group="9"
+                        title="Welcomes You - Celebrating 9 Years of Beauty & Aesthetics & Beginning of The 10th"
+                        aria-label="View photo in high resolution"
+                      >
+                        <i class="fas fa-search-plus"></i>
+                      </a> -->
+                      <div class="luxor-card-gradient-bar">
+                        <h4 class="luxor-card-caption-title">
+                          The Welcome Easel
+                        </h4>
+                        <p class="luxor-card-caption-sub">
+                          Celebrating 9 Years &amp; Stepping Into Year 10
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bottom Row: 3 Photos (Team/Guests 38% + Gourmet Quote 28% + Citrus Buffet 34%) -->
+                  <div class="luxor-collage-row-bottom">
+                    <!-- Photo 5: Celebration with Team & Guests (38%) -->
+                    <div class="luxor-card-wrap luxor-card--5">
+                      <img
+                        src="assets/images/celebration/5.webp"
+                        alt="Celebration Moments with Doctors, Team and Guests"
+                        class="luxor-card-img"
+                        loading="lazy"
+                      />
+                      <span class="luxor-card-badge-top">
+                        <i class="fas fa-heart"></i> Cherished Moments
+                      </span>
+                      <!-- <a
+                        href="assets/images/celebration/5.webp"
+                        class="img-popup luxor-card-zoom-btn"
+                        data-group="9"
+                        title="Celebration Moments - With Our Beloved Team & Patient Family"
+                        aria-label="View photo in high resolution"
+                      >
+                        <i class="fas fa-search-plus"></i>
+                      </a> -->
+                      <div class="luxor-card-gradient-bar">
+                        <h4 class="luxor-card-caption-title">
+                          Celebration &amp; Gratitude
+                        </h4>
+                        <p class="luxor-card-caption-sub">
+                          With our beloved team &amp; patient family
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Photo 4: Gourmet Sliders & Quote (28%) -->
+                    <div class="luxor-card-wrap luxor-card--4">
+                      <img
+                        src="assets/images/celebration/3.webp"
+                        alt="Words of Beauty & Gourmet Sliders Spread"
+                        class="luxor-card-img"
+                        loading="lazy"
+                      />
+                      <span class="luxor-card-badge-top">
+                        <i class="fas fa-quote-left"></i> Words of Beauty
+                      </span>
+                      <!-- <a
+                        href="assets/images/celebration/3.webp"
+                        class="img-popup luxor-card-zoom-btn"
+                        data-group="9"
+                        title="Real beauty comes from confidence, kindness, and being comfortable in your own skin!"
+                        aria-label="View photo in high resolution"
+                      >
+                        <i class="fas fa-search-plus"></i>
+                      </a> -->
+                      <div class="luxor-card-gradient-bar">
+                        <h4 class="luxor-card-caption-title">Real Beauty</h4>
+                        <p class="luxor-card-caption-sub">
+                          Confidence, kindness &amp; joy
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Photo 3: Citrus & Floral Banquet Spread (34%) -->
+                    <div class="luxor-card-wrap luxor-card--3">
+                      <img
+                        src="assets/images/celebration/4.webp"
+                        alt="Anniversary Banquet Spread with Citrus & Floral Decor"
+                        class="luxor-card-img"
+                        loading="lazy"
+                      />
+                      <span class="luxor-card-badge-top">
+                        <i class="fas fa-glass-cheers"></i> The Festivities
+                      </span>
+                      <!-- <a
+                        href="assets/images/celebration/4.webp"
+                        class="img-popup luxor-card-zoom-btn"
+                        data-group="9"
+                        title="Anniversary Banquet Spread & Artisan Citrus Décor"
+                        aria-label="View photo in high resolution"
+                      >
+                        <i class="fas fa-search-plus"></i>
+                      </a> -->
+                      <div class="luxor-card-gradient-bar">
+                        <h4 class="luxor-card-caption-title">
+                          Anniversary Banquet
+                        </h4>
+                        <p class="luxor-card-caption-sub">
+                          Artisan citrus &amp; golden decor
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Luxor 9-Year Anniversary Celebration Section End-->
 
       <section class="team-one" style="padding-bottom: 0; display: none">
         <div class="container">
