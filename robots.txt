@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /default.php
+Disallow: /assets/inc/
+
+Sitemap: https://luxorhospital.com/sitemap.xml

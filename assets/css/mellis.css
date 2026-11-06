@@ -6893,6 +6893,7 @@ ul {
   text-align: center;
 }
 
+.page-header__inner h1,
 .page-header__inner h2 {
   font-size: 40px;
   color: var(--mellis-white);
